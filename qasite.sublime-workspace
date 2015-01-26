@@ -1,0 +1,1358 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"question",
+				"question"
+			],
+			[
+				"an",
+				"answerModel"
+			],
+			[
+				"ans",
+				"answerForm"
+			],
+			[
+				"tag",
+				"tagName"
+			],
+			[
+				"quest",
+				"questionModel"
+			],
+			[
+				"ques",
+				"questionModel"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"ta",
+				"tagNames"
+			],
+			[
+				"a",
+				"allTags"
+			],
+			[
+				"logg",
+				"logged_in_userid"
+			],
+			[
+				"log",
+				"logInUser"
+			],
+			[
+				"matc",
+				"matchedUsers"
+			],
+			[
+				"password",
+				"password_hash"
+			],
+			[
+				"mat",
+				"matchedUser"
+			],
+			[
+				"and",
+				"andWhere"
+			],
+			[
+				"anvä",
+				"användare"
+			],
+			[
+				"col",
+				"colIndex"
+			],
+			[
+				"vie",
+				"views"
+			],
+			[
+				"env",
+				"env"
+			],
+			[
+				"e",
+				"event"
+			],
+			[
+				"inp",
+				"inputHandler"
+			],
+			[
+				"token",
+				"token"
+			],
+			[
+				"del",
+				"deleteEnvFrame"
+			],
+			[
+				"eva",
+				"evaluate"
+			],
+			[
+				"add",
+				"addEnvFrame"
+			],
+			[
+				"prog",
+				"prog"
+			],
+			[
+				"program",
+				"program"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"inde",
+				"indexOf"
+			],
+			[
+				"DEC",
+				"DEC"
+			],
+			[
+				"loop",
+				"loopCounter"
+			],
+			[
+				"en",
+				"env"
+			],
+			[
+				"w",
+				"writeln"
+			],
+			[
+				"S",
+				"S1"
+			],
+			[
+				"findw",
+				"findway_mem"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"in",
+				"indexOf"
+			],
+			[
+				"expr",
+				"expr"
+			],
+			[
+				"to",
+				"tokenize"
+			],
+			[
+				"st",
+				"stmt"
+			],
+			[
+				"pr",
+				"prog"
+			],
+			[
+				"row",
+				"rowNum"
+			],
+			[
+				"stmt",
+				"stmtArray"
+			],
+			[
+				"is",
+				"isNumber"
+			],
+			[
+				"input",
+				"inputVarName"
+			],
+			[
+				"val",
+				"valStack"
+			],
+			[
+				"op",
+				"opStack"
+			],
+			[
+				"va",
+				"valueStack"
+			],
+			[
+				"evalE",
+				"evalExpr"
+			],
+			[
+				"n",
+				"numEndPos"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"request",
+				"requestRecorderId"
+			],
+			[
+				"records",
+				"records"
+			],
+			[
+				"createTa",
+				"createTableIfNotExists"
+			],
+			[
+				"me",
+				"method"
+			],
+			[
+				"databse",
+				"databaseHandler"
+			],
+			[
+				"create",
+				"create"
+			],
+			[
+				"di",
+				"di"
+			],
+			[
+				"page",
+				"pageId"
+			],
+			[
+				"exe",
+				"execute"
+			],
+			[
+				"comment",
+				"commentId"
+			],
+			[
+				"comm",
+				"commentModel"
+			],
+			[
+				"inactivate",
+				"inactivate"
+			],
+			[
+				"har",
+				"hard-delete"
+			],
+			[
+				"soft",
+				"soft-delete"
+			],
+			[
+				"undo",
+				"undo-delete"
+			],
+			[
+				"användare",
+				"Användare"
+			],
+			[
+				"userInf",
+				"userInfoExtract"
+			],
+			[
+				"all",
+				"allUsers"
+			],
+			[
+				"values",
+				"values"
+			],
+			[
+				"ac",
+				"acronym"
+			],
+			[
+				"return",
+				"return"
+			],
+			[
+				"con",
+				"controller"
+			],
+			[
+				"CDI",
+				"CDIFactoryDefault"
+			],
+			[
+				"font",
+				"font"
+			],
+			[
+				"max",
+				"maxWidth"
+			],
+			[
+				"about",
+				"about"
+			],
+			[
+				"app",
+				"app"
+			],
+			[
+				"context",
+				"context"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"comments",
+				"comments"
+			],
+			[
+				"md",
+				"md"
+			],
+			[
+				"redovisning",
+				"redovisning"
+			],
+			[
+				"noD",
+				"nOfDices"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"flyt",
+				"flyttal2"
+			],
+			[
+				"fl",
+				"flyttal1"
+			],
+			[
+				"departure",
+				"departure_page"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"cookie",
+				"cookieObj"
+			],
+			[
+				"utf",
+				"utf8_encode"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"cook",
+				"cookie"
+			],
+			[
+				"C",
+				"collapsibles"
+			],
+			[
+				"co",
+				"collapsible"
+			],
+			[
+				"no",
+				"noOfJourneys"
+			],
+			[
+				"from",
+				"fromObj"
+			],
+			[
+				"station",
+				"station_info"
+			],
+			[
+				"sea",
+				"searchtext"
+			],
+			[
+				"get_",
+				"get_stations"
+			],
+			[
+				"clea",
+				"clearTimeToDeparture"
+			],
+			[
+				"marin",
+				"margin-bottom"
+			],
+			[
+				"stationer",
+				"stationer"
+			],
+			[
+				"upda",
+				"updatesMaxTime"
+			],
+			[
+				"time",
+				"timeBetweenUpdates"
+			],
+			[
+				"second",
+				"second"
+			],
+			[
+				"jou",
+				"journeyTime"
+			],
+			[
+				"border-bott",
+				"border-bottom-color"
+			],
+			[
+				"border-bo",
+				"border-bottom-width"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"route",
+				"routeInfo"
+			],
+			[
+				"rout",
+				"routeSection"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"inte",
+				"intervalId"
+			],
+			[
+				"clear",
+				"clearInterval"
+			],
+			[
+				"alig",
+				"text-align"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"par",
+				"parseAjaxResponse"
+			],
+			[
+				"ul",
+				"ulFirst"
+			],
+			[
+				"se",
+				"second"
+			],
+			[
+				"first",
+				"first"
+			],
+			[
+				"index",
+				"index"
+			],
+			[
+				"coo",
+				"cookieArray"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/src/Questions/QuestionController.php",
+			"settings":
+			{
+				"buffer_size": 7539,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/Answers/AnswersController.php",
+			"settings":
+			{
+				"buffer_size": 3118,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "app/src/Comments/CommentsController.php",
+			"settings":
+			{
+				"buffer_size": 2747,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "app/src/Comments/Comment.php",
+			"settings":
+			{
+				"buffer_size": 145,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "app/view/question/abstract.tpl.php",
+			"settings":
+			{
+				"buffer_size": 334,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/Answers/Answer.php",
+			"settings":
+			{
+				"buffer_size": 277,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "src/MVC/CDatabaseModel.php",
+			"settings":
+			{
+				"buffer_size": 5036,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/Questions/Question.php",
+			"settings":
+			{
+				"buffer_size": 435,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Mikael/Desktop/Kurser/HT14_PHP/Redovisningstext.txt",
+			"settings":
+			{
+				"buffer_size": 3353,
+				"line_ending": "Windows",
+				"name": "Redovisningstext"
+			}
+		},
+		{
+			"file": "database_setup.sql",
+			"settings":
+			{
+				"buffer_size": 1506,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "$_COOKIE = array[2]\n    $_COOKIE['XDEBUG_SESSION'] = (string) sublime.xdebug\n    $_COOKIE['Cxampphtdocsqasiteappconfig'] = (string) otdfuujj80at2im3eqju0hesp7\n$_ENV = array[0]\n$_FILES = array[0]\n$_GET = array[0]\n$_POST = array[3]\n    $_POST['answer'] = (string) Mitt svar 4\n    $_POST['questionId'] = (string) 4\n    $_POST['Svara'] = (string) Svara\n$_REQUEST = array[3]\n    $_REQUEST['answer'] = (string) Mitt svar 4\n    $_REQUEST['questionId'] = (string) 4\n    $_REQUEST['Svara'] = (string) Svara\n$_SERVER = array[55]\n    $_SERVER['REDIRECT_MIBDIRS'] = (string) C:/xampp/php/extras/mibs\n    $_SERVER['REDIRECT_MYSQL_HOME'] = (string) \\xampp\\mysql\\bin\n    $_SERVER['REDIRECT_OPENSSL_CONF'] = (string) C:/xampp/apache/bin/openssl.cnf\n    $_SERVER['REDIRECT_PHP_PEAR_SYSCONF_DIR'] = (string) \\xampp\\php\n    $_SERVER['REDIRECT_PHPRC'] = (string) \\xampp\\php\n    $_SERVER['REDIRECT_TMP'] = (string) \\xampp\\tmp\n    $_SERVER['REDIRECT_STATUS'] = (string) 200\n    $_SERVER['MIBDIRS'] = (string) C:/xampp/php/extras/mibs\n    $_SERVER['MYSQL_HOME'] = (string) \\xampp\\mysql\\bin\n    $_SERVER['OPENSSL_CONF'] = (string) C:/xampp/apache/bin/openssl.cnf\n    $_SERVER['PHP_PEAR_SYSCONF_DIR'] = (string) \\xampp\\php\n    $_SERVER['PHPRC'] = (string) \\xampp\\php\n    $_SERVER['TMP'] = (string) \\xampp\\tmp\n    $_SERVER['HTTP_HOST'] = (string) localhost\n    $_SERVER['HTTP_CONNECTION'] = (string) keep-alive\n    $_SERVER['CONTENT_LENGTH'] = (string) 43\n    $_SERVER['HTTP_CACHE_CONTROL'] = (string) max-age=0\n    $_SERVER['HTTP_ACCEPT'] = (string) text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\n    $_SERVER['HTTP_ORIGIN'] = (string) http://localhost\n    $_SERVER['HTTP_USER_AGENT'] = (string) Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36\n    $_SERVER['CONTENT_TYPE'] = (string) application/x-www-form-urlencoded\n    $_SERVER['HTTP_REFERER'] = (string) http://localhost/qasite/webroot/question/id/4\n    $_SERVER['HTTP_ACCEPT_ENCODING'] = (string) gzip, deflate\n    $_SERVER['HTTP_ACCEPT_LANGUAGE'] = (string) sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4\n    $_SERVER['HTTP_COOKIE'] = (string) XDEBUG_SESSION=sublime.xdebug; Cxampphtdocsqasiteappconfig=otdfuujj80at2im3eqju0hesp7\n    $_SERVER['PATH'] = (string) C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Mikael\\AppData\\Roaming\\npm;C:\\xampp\\php\n    $_SERVER['SystemRoot'] = (string) C:\\WINDOWS\n    $_SERVER['COMSPEC'] = (string) C:\\WINDOWS\\system32\\cmd.exe\n    $_SERVER['PATHEXT'] = (string) .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC\n    $_SERVER['WINDIR'] = (string) C:\\WINDOWS\n    $_SERVER['SERVER_SIGNATURE'] = (string) <address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.15 Server at localhost Port 80</address> \n    $_SERVER['SERVER_SOFTWARE'] = (string) Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.5.15\n    ...\n$_SESSION = array[2]\n    $_SESSION['logged_in_userid'] = (string) 8\n    $_SESSION['logged_in_usermail'] = (string) Anders\n$numQueries = <uninitialized>\n$params = array[0]\n$queries = <uninitialized>\n$query = (string) INSERT INTO answer    (user_id, question_id, text, created)   VALUES  ('8', '4', 'Mitt svar 4', 'Fri, 23 Jan 2015 15:15:51 +0100'); \n$res = (bool) 0\n$this = Mos\\Database\\CDatabaseBasic[16]\n    $this::numQueries = (int) 3\n    $this::queries = array[3]\n        ...\n    $this::params = array[3]\n        ...\n    $this->options = array[9]\n        ...\n    $this->db = PDO[0]\n    $this->stmt = PDOStatement[1]\n        ...\n    $this->dialect = (string) sqlite\n    $this->sql = (string) INSERT INTO answer    (user_id, question_id, text, created)   VALUES  ('8', '4', 'Mitt svar 4', 'Fri, 23 Jan 2015 15:15:51 +0100'); \n    $this->prefix = <null>\n    $this->columns = <null>\n    $this->from = <null>\n    $this->where = <null>\n    $this->groupby = <null>\n    $this->orderby = <null>\n    $this->limit = <null>\n    $this->offset = <null>\n",
+			"settings":
+			{
+				"buffer_size": 4472,
+				"line_ending": "Windows",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 343.0,
+		"selected_items":
+		[
+			[
+				"x",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"xd",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"xde",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"xdebug",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"xdeb",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"xdeg",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"de",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"xdebug ",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"xdebug sta",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"xdebig",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"Xde",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 393.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/qasite/src/DI/CDIFactory.php",
+		"/C/xampp/htdocs/qasite/src/Session/CSession.php",
+		"/C/xampp/htdocs/qasite/app/src/Questions/QuestionController.php",
+		"/C/xampp/htdocs/qasite/vendor/mos/cdatabase/src/Database/CDatabaseBasic.php",
+		"/C/xampp/htdocs/qasite/vendor/mos/cdatabase/src/Database/TSQLQueryBuilderBasic.php",
+		"/C/xampp/htdocs/qasite/src/DI/CDI.php",
+		"/C/xampp/htdocs/qasite/src/DI/TInjectable.php",
+		"/C/xampp/htdocs/qasite/src/MVC/CDatabaseModel.php",
+		"/C/xampp/htdocs/qasite/vendor/mos/cform/src/HTMLForm/CFormElement.php",
+		"/C/xampp/htdocs/qasite/vendor/mos/cform/src/HTMLForm/CForm.php",
+		"/C/xampp/htdocs/qasite/webroot/index.php",
+		"/C/xampp/htdocs/qasite/src/DI/CDIFactoryDefault.php",
+		"/C/xampp/htdocs/qasite/vendor/composer/ClassLoader.php",
+		"/C/xampp/htdocs/qasite/src/Loader/CPsr4Autoloader.php",
+		"/C/xampp/htdocs/qasite/src/View/CViewContainerBasic.php",
+		"/C/xampp/htdocs/qasite/src/MVC/CDispatcherBasic.php",
+		"/C/xampp/htdocs/qasite/app/src/Tags/Tag.php",
+		"/C/xampp/htdocs/qasite/app/src/Tags/TagsController.php",
+		"/C/xampp/htdocs/qasite/app/view/question/abstract.tpl.php",
+		"/C/xampp/htdocs/qasite/app/view/tag/tag.tpl.php",
+		"/C/Users/Mikael/Downloads/htsearch",
+		"/C/xampp/htdocs/qasite/webroot/css/kajja/question.less",
+		"/C/xampp/htdocs/qasite/webroot/css/kajja/panel.less",
+		"/C/xampp/htdocs/qasite/webroot/css/kajja/kajja.less",
+		"/C/xampp/htdocs/qasite/app/config/navbar.php",
+		"/C/xampp/htdocs/qasite/webroot/css/kajja/tag.less",
+		"/C/xampp/htdocs/qasite/webroot/css/kajja/kajja.css",
+		"/C/xampp/htdocs/qasite/app/src/QuestionTags/QuestionTag.php",
+		"/C/xampp/htdocs/qasite/src/Route/CRouterBasic.php",
+		"/C/xampp/htdocs/qasite/app/config/error_reporting.php",
+		"/C/xampp/htdocs/qasite/src/Users/UsersController.php",
+		"/C/xampp/htdocs/qasite/app/src/Questions/Question.php",
+		"/C/xampp/htdocs/qasite/app/view/question/form.tpl.php",
+		"/C/xampp/htdocs/qasite/src/Users/User.php",
+		"/C/xampp/htdocs/qasite/app/src/Tags/TagController.php",
+		"/C/xampp_old/htdocs/restricted/user_pwd.sql",
+		"/C/xampp/htdocs/qasite/app/view/user/list-all.tpl.php",
+		"/C/xampp/htdocs/qasite/app/view/qasite/header.tpl.php",
+		"/C/xampp/htdocs/qasite/src/Response/CResponseBasic.php",
+		"/C/xampp/htdocs/qasite/src/Url/CUrl.php",
+		"/C/xampp/htdocs/Anax-MVC/vendor/phpmvc/comment/src/Comment/CommentController.php",
+		"/C/xampp/php/php.ini",
+		"/C/xampp/htdocs/qasite/app/view/base/page.tpl.php",
+		"/C/xampp/htdocs/qasite/cdatabase_config_sqlite.php",
+		"/C/xampp/htdocs/qasite/src/ThemeEngine/CThemeBasic.php",
+		"/C/xampp/htdocs/qasite/app/view/user/user.tpl.php",
+		"/C/xampp/htdocs/Anax-MVC/app/config/database_sqlite.php",
+		"/C/xampp/htdocs/Anax-MVC/webroot/index.php",
+		"/C/xampp/htdocs/Anax-MVC/vendor/mos/cdatabase/src/Database/CDatabaseBasic.php",
+		"/C/xampp/htdocs/qasite/database_setup.sql",
+		"/C/xampp/htdocs/qasite/src/User/UserController.php",
+		"/C/xampp/htdocs/qasite/webroot/css/kajja/header.less",
+		"/C/xampp/htdocs/qasite/vendor/mos/cdatabase/README.md",
+		"/C/xampp/htdocs/qasite/webroot/config.php",
+		"/C/xampp/htdocs/qasite/webroot/config_with_app.php",
+		"/C/xampp/htdocs/qasite/app/config/theme-kajja.php",
+		"/C/xampp/htdocs/Anax-MVC/app/view/welcome/header.tpl.php",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/Interpreter/basic-interpreter.js",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basicprog (1)/typesys.bas",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basicprog (1)/multi2_typer.bas",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basicprog (1)/multi2.bas",
+		"/C/xampp/htdocs/qasite/theme/kajja/index.tpl.php",
+		"/C/xampp/htdocs/qasite/app/config/theme.php",
+		"/C/xampp/htdocs/Anax-MVC/src/DI/CDIFactoryDefault.php",
+		"/C/xampp/htdocs/Anax-MVC/app/config/theme-kajja.php",
+		"/C/xampp/htdocs/qasite/src/User/User.php",
+		"/C/xampp/htdocs/Anax-MVC/src/MVC/CDatabaseModel.php",
+		"/C/xampp/htdocs/Anax-MVC/webroot/config_with_app.php",
+		"/C/xampp/htdocs/Anax-MVC/webroot/config.php",
+		"/C/xampp/htdocs/Anax-MVC/app/view/me/page.tpl.php",
+		"/C/xampp/htdocs/qasite/src/User/UsersController.php",
+		"/C/xampp/htdocs/qasite/src/Route/CRouteBasic.php",
+		"/C/xampp/htdocs/Anax-MVC/webroot/.htaccess",
+		"/C/xampp/htdocs/qasite/src/ThemeEngine/IThemeEngine.php",
+		"/C/xampp/htdocs/qasite/src/TConfigure.php",
+		"/C/xampp/htdocs/qasite/src/DI/TInjectionAware.php",
+		"/C/xampp/htdocs/qasite/app/view/qasite/qasite.sublime-project",
+		"/C/Users/Mikael/AppData/Roaming/Sublime Text 2/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/C/xampp/htdocs/Anax-MVC/src/DI/CDIFactory.php",
+		"/C/xampp/htdocs/Anax-MVC/src/Users/UsersController.php",
+		"/C/xampp/htdocs/qasite/app/view/welcome/header.tpl.php",
+		"/C/xampp/htdocs/qasite/src/HTMLForm/FormSmallController.php",
+		"/C/xampp/htdocs/qasite/webroot/.htaccess",
+		"/C/Users/Mikael/Desktop/Kurser/HT14_Programmeringsspråk och paradigmer/tentakod.js",
+		"/C/Users/Mikael/Desktop/Kurser/HT14_Programmeringsspråk och paradigmer/Labb4 - Logikprog/labbfamilj.pl",
+		"/C/xampp/htdocs/qasite/src/HTMLForm/FormController.php",
+		"/C/xampp/htdocs/qasite/src/HTMLForm/CFormExample.php",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basicprog (1)/funk1.bas",
+		"/C/xampp/htdocs/Anax-MVC/app/src/Theme/ThemeController.php",
+		"/C/xampp/htdocs/Anax-MVC/vendor/phpmvc/comment/src/Comment/CommentForm.php",
+		"/C/xampp/htdocs/Anax-MVC/src/Users/User.php",
+		"/C/xampp/htdocs/Anax-MVC/webroot/css/stylephp/style.php",
+		"/C/xampp/htdocs/Anax-MVC/composer.json",
+		"/C/xampp/htdocs/qasite/composer.json",
+		"/C/xampp/htdocs/qasite/README.md",
+		"/C/Program Files (x86)/Git/doc/git/html/git-clone.html",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/Interpreter/view-interpreter.html",
+		"/C/Users/Mikael/Desktop/Programmering/Webb/Marknadssimulator/scripts/marketsim-1.2.js",
+		"/C/Users/Mikael/Desktop/Programmering/Prolog/labb4_prolog.pl",
+		"/C/Users/Mikael/Desktop/Kurser/HT14_Programmeringsspråk och paradigmer/Labb1 - Assembler/Lab1_MikaelFeuk.65s",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basicprog (1)/tabell.bas",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basic-interpreter.js",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basicprog (1)/temp.bas",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basicprog (1)/tal.bas",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/basicprog (1)/hej.bas",
+		"/C/Users/Mikael/Desktop/Kurser/HT14 Security Arch/Kommentarer.md",
+		"/C/Users/Mikael/Desktop/Kurser/HT14_Programmeringsspråk och paradigmer/Labb4 - Logikprog/labb4_prolog.pl",
+		"/C/Users/Mikael/Desktop/Kurser/HT14_Programmeringsspråk och paradigmer/Labb4 - Logikprog/familj.pl",
+		"/C/Program Files (x86)/swipl/README.TXT",
+		"/C/Users/Mikael/Desktop/Programmering/JS/Basic-interpreter/view-interpreter.html",
+		"/C/Program Files (x86)/swipl/doc/windows.html",
+		"/C/xampp_old/htdocs/uppgift4/scripts/meny.js",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/test/Recorder/RequestRecordAnaxTest.php",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/src/Recorder/RequestRecordAnax.php",
+		"/C/xampp/htdocs/Anax-MVC/vendor/kajja/requestrecorder/src/Recorder/RequestRecordAnax.php",
+		"/C/xampp/htdocs/Anax-MVC/src/Session/CSession.php",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/src/Recorder/RequestRecord.php",
+		"/C/xampp/htdocs/Anax-MVC/vendor/kajja/requestrecorder/src/Recorder/RequestDatabase.php",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/src/Recorder/RequestDatabase.php",
+		"/C/xampp/htdocs/Anax-MVC/app/content/kmom6.md",
+		"/C/xampp/htdocs/Anax-MVC/app/config/navbar_me.php",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/test/Recorder/MockCDIAnax.php",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/.travis.yml",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/run_unit_tests.bat",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/phpunit.xml",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/test/Recorder/RequestDatabaseTest.php",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/test/phpunit.xml",
+		"/C/Users/Mikael/Desktop/Programmering/PHP/kajja/Recorder/test/Recorder/MockCRequestBasic.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"join",
+			"checked",
+			"query",
+			"prepare",
+			"inner",
+			"getVarV",
+			"evalEx",
+			"addEn",
+			"deleteE",
+			"Interpreter.env",
+			"createV",
+			"setVa",
+			"getVar",
+			"addEn",
+			"br",
+			":",
+			"counter",
+			"Interpreter.counter",
+			"loadPr",
+			"return",
+			"setV",
+			"getVar",
+			"Interpreter.env",
+			"getVar",
+			"funktion",
+			"apply",
+			"*****/",
+			"stm",
+			"expr",
+			"disconnect",
+			"disconnct",
+			"execute",
+			"print",
+			"koden",
+			"records",
+			"delete",
+			"execute",
+			"build",
+			"join",
+			"drop",
+			"execute",
+			"insert",
+			"not_empty",
+			"create",
+			"print_r",
+			"set",
+			"setP",
+			"getP",
+			"extr",
+			"prepare",
+			"set value",
+			"create",
+			"session",
+			"create",
+			"setFet",
+			"prepare",
+			"config",
+			"@fontFamily",
+			"resp",
+			"res",
+			"content",
+			"@fontfamily",
+			"@font-family",
+			".border-radius",
+			"test",
+			"#stations",
+			"date",
+			"test",
+			"console",
+			"departures",
+			"console",
+			"empty",
+			"on",
+			"settings",
+			"jour",
+			"parse",
+			"null",
+			"test",
+			"initR",
+			"?",
+			"$(",
+			"main",
+			"drawMarketPrice",
+			"matchORders",
+			"getVolumes",
+			"getMarketPrices",
+			"placeOrder",
+			"placePrder",
+			"marketPrice",
+			"console",
+			"****",
+			".filter",
+			"nytt mar",
+			"marketPrice.pu",
+			"\");\n",
+			"console.log(\"market",
+			"NormalDistribution",
+			"myNameSpace"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Metod",
+			"metod",
+			"stmt",
+			"stm",
+			"panel",
+			"journey",
+			"myNS"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/src/Questions/QuestionController.php",
+					"settings":
+					{
+						"buffer_size": 7539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								304,
+								762
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 157.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/src/Answers/AnswersController.php",
+					"settings":
+					{
+						"buffer_size": 3118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2483,
+								2363
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1117.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/src/Comments/CommentsController.php",
+					"settings":
+					{
+						"buffer_size": 2747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1098,
+								1098
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 558.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/src/Comments/Comment.php",
+					"settings":
+					{
+						"buffer_size": 145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								143
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/view/question/abstract.tpl.php",
+					"settings":
+					{
+						"buffer_size": 334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								278
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/src/Answers/Answer.php",
+					"settings":
+					{
+						"buffer_size": 277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								63
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/MVC/CDatabaseModel.php",
+					"settings":
+					{
+						"buffer_size": 5036,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2796.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/src/Questions/Question.php",
+					"settings":
+					{
+						"buffer_size": 435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Users/Mikael/Desktop/Kurser/HT14_PHP/Redovisningstext.txt",
+					"settings":
+					{
+						"buffer_size": 3353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1289,
+								1289
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Redovisningstext",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "database_setup.sql",
+					"settings":
+					{
+						"buffer_size": 1506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1506,
+								1506
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 349.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 10,
+					"settings":
+					{
+						"buffer_size": 4472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4472,
+								4472
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 112.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.920508744038,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.xdebug":
+	{
+		"height": 52.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,1 @@
+<a href='<?=$this->url->create('question/tag/' . $tagId)?>' class='tag'><?=$tagName?></a>

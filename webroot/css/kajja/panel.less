@@ -1,0 +1,36 @@
+.panel {
+	background-color: @panelBackground;
+	border-radius: @borderRadius;
+	overflow: hidden;
+	margin-bottom: @magicNumber;
+	.shadow;
+	#figure {
+		font-size: @iconSize;
+		span {
+			margin: @magicNumber 0 @magicNumber 0;
+			text-shadow: 2px 2px darken(@panelBackground, 10%);
+		}
+	}
+	#text {
+		height: @magicNumber * 4;
+		background-color: @panelTextBackground;
+		border-top: 1px solid darken(@panelTextBackground, 30%);
+		text-align: center;
+		padding-left: 1em;
+		padding-right: 1em;
+		p {
+			font-weight: bold;
+			text-shadow: 2px 2px 2px darken(@panelTextBackground, 10%);
+			padding-top: @magicNumber - 1px;
+			padding-bottom: @magicNumber;
+		}
+	}
+/*
+	a:hover {
+		#text {
+			font-color: @fontColor; 
+		}
+
+	}
+	*/
+}

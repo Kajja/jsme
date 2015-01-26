@@ -12,64 +12,45 @@ return [
     'items' => [
 
         // This is a menu item
-        'home'  => [
-            'text'  => 'Home',
+        'Home'  => [
+            'text'  => 'Start',
             'url'   => $this->di->get('url')->create(''),
-            'title' => 'Home route of current frontcontroller'
+            'title' => 'Första sidan'
         ],
  
         // This is a menu item
-        'test'  => [
-            'text'  => 'Submenu',
-            'url'   => $this->di->get('url')->create('submenu'),
-            'title' => 'Submenu with url as internal route within this frontcontroller',
-
-            // Here we add the submenu, with some menu items, as part of a existing menu item
-            'submenu' => [
-
-                'items' => [
-
-                    // This is a menu item of the submenu
-                    'item 0'  => [
-                        'text'  => 'Item 0',
-                        'url'   => $this->di->get('url')->create('submenu/item-0'),
-                        'title' => 'Url as internal route within this frontcontroller'
-                    ],
-
-                    // This is a menu item of the submenu
-                    'item 2'  => [
-                        'text'  => '/humans.txt',
-                        'url'   => $this->di->get('url')->asset('/humans.txt'),
-                        'title' => 'Url to sitespecific asset',
-                        'class' => 'italic'
-                    ],
-
-                    // This is a menu item of the submenu
-                    'item 3'  => [
-                        'text'  => 'humans.txt',
-                        'url'   => $this->di->get('url')->asset('humans.txt'),
-                        'title' => 'Url to asset relative to frontcontroller',
-                    ],
-                ],
-            ],
+        'Questions'  => [
+            'text'  => 'Frågor',
+            'url'   => $this->di->get('url')->create('question/list'),
+            'title' => 'Översikt frågor',
         ],
  
         // This is a menu item
-        'controller' => [
-            'text'  =>'Controller (marked for all descendent actions)',
-            'url'   => $this->di->get('url')->create('controller'),
-            'title' => 'Url to relative frontcontroller, other file',
-            'mark-if-parent-of' => 'controller',
+        'Tags' => [
+            'text'  =>'Taggar',
+            'url'   => $this->di->get('url')->create('tags/list'),
+            'title' => 'Alla taggar',
         ],
 
         // This is a menu item
-        'about' => [
-            'text'  =>'About',
+        'Users' => [
+            'text'  =>'Användare',
+            'url'   => $this->di->get('url')->create('users/list'),
+            'title' => 'Alla användare'
+        ],
+        // This is a menu item
+        'Question' => [
+            'text'  =>'Ställ fråga',
+            'url'   => $this->di->get('url')->create('question/create'),
+            'title' => 'Ställ en fråga'
+        ],
+        // This is a menu item
+        'About' => [
+            'text'  =>'Om oss',
             'url'   => $this->di->get('url')->create('about'),
-            'title' => 'Internal route within this frontcontroller'
+            'title' => 'Om oss'
         ],
-    ],
- 
+    ], 
 
 
     /**

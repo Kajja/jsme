@@ -1,0 +1,58 @@
+// The horisontal grid set-up of the theme (mobile-first)
+
+body.page-container {
+	.wrapperFixedNav();
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: @total-width;
+	max-width: @maxWidth;
+	font-family: @fontFamilyOldenburg;
+	.clearfix();
+}
+
+header,
+nav,
+#alert,
+#flash,
+main {
+	.column(@columns);
+	margin-bottom: @magicNumber;
+}
+
+
+#panel-col-1,
+#panel-col-2,
+#panel-col-3,
+#panel-col-4 {	
+	.column(@columns);
+	margin-bottom: @magicNumber;
+}
+
+#footer-col-1,
+#footer-col-2,
+#footer-col-3 {
+	.column(@columns);
+	margin-bottom: @magicNumber;
+}
+
+#wrap-panel-col,
+#wrap-footer-col {
+	.clearfix();
+	text-align: center;
+}
+
+#footer {
+	.column(@columns);
+	margin-bottom: @magicNumber;
+}
+
+// Hide all navbar link except the first
+.navbar > ul > li:not(:first-child) { // Fulfix
+        display: none;
+}
+
+.navbar > ul:hover > li { // Fulfix
+        display: inline-block;
+}
