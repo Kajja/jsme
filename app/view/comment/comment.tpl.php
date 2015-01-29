@@ -1,4 +1,3 @@
-<div class='abstract'>
-    <p><?=$text;?></p>
-    <p><?=$created;?></p>
+<div class='comment'>
+    <span><?=$text;?> - <a href='<?=$this->url->create("users/profile/{$userId}");?>'><?=$user;?></a>, <?=$created;?></span>
 </div>

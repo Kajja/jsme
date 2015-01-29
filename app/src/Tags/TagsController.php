@@ -55,7 +55,9 @@ class TagsController implements IInjectionaware
         // Use the model to get all stored users
         $tags = $this->tagModel->findAll();
 
+        $this->theme->setTitle('Taggar');
         $this->theme->setVariable('bodyClasses', 'page-container');
+        $this->views->addString('<h3>Taggar</h3><hr>');
         $this->display($tags);
     }
 
@@ -74,7 +76,7 @@ class TagsController implements IInjectionaware
      *  Display the tags in the tag view
      *
      */
-    public function display($tags)
+    public function display($tags, $area = 'main')
     {
         // Add tags to view
         foreach ($tags as $tag) {
@@ -82,7 +84,7 @@ class TagsController implements IInjectionaware
             $this->views->add('tag/tag', [
                 'tagId'     => $tagProp['id'],
                 'tagName'   => $tagProp['name']
-            ]);
+            ], $area);
         }
     }
 
@@ -90,12 +92,12 @@ class TagsController implements IInjectionaware
      * Displays the most popular tags
      *
      */
-    public function popularTagsAction()
+    public function popularTagsAction($area)
     {
         $tags = $this->tagModel->popTags();
 
         //Display the tags
-        $this->display($tags);
+        $this->display($tags, $area);
     }
 
 }

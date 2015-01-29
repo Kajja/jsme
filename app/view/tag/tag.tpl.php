@@ -1,1 +1,5 @@
-<a href='<?=$this->url->create('question/tag/' . $tagId)?>' class='tag'><?=$tagName?></a>
+<a href='<?=$this->url->create('question/tag/' . $tagId)?>'>
+    <div class='tag'>
+        <?=$tagName?>
+    </div>
+</a>

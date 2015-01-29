@@ -30,13 +30,19 @@ use	\Anax\DI\IInjectionaware,
  	/**
  	 * Get all elements
  	 *
+     * @param string how the result should be ordered
  	 * @return all elements in array
  	 */
- 	public function findAll() 
+ 	public function findAll($orderBy = null) 
  	{
 
  		// Sets selection criteria and table name
  		$this->db->select()->from($this->getSource());
+
+        if ($orderBy !== null) {
+            // Return the result sorted according to parameter
+            $this->orderBy($orderBy);
+        }
 
  		// Execute the query
  		$this->db->execute();
@@ -214,6 +220,20 @@ use	\Anax\DI\IInjectionaware,
     	return $this->db->fetchAll();
 	}
 
+    /**
+     * Raw SQL execute
+     *
+     * @param string condition
+     *
+     * @return $this (for chaining)
+     */
+    public function executeRaw($sql, $params = [])
+    {
+        $this->db->execute($sql, $params);
+        $this->db->setFetchModeClass(__CLASS__);
+ 
+        return $this->db->fetchAll();   
+    }
 
 	/**
 	 * Build delete query
@@ -347,6 +367,20 @@ use	\Anax\DI\IInjectionaware,
     public function joinB($table, $condition)
     {
         $this->db->join($table, $condition);
+
+        return $this;   
+    }
+
+         /**
+     * Left join
+     *
+     * @param string condition
+     *
+     * @return $this (for chaining)
+     */
+    public function leftJoin($table, $condition)
+    {
+        $this->db->leftJoin($table, $condition);
 
         return $this;   
     }

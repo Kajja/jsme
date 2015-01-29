@@ -1,6 +1,10 @@
-<div class='abstract answer'>
+<div class='panel answer'>
     <p><?=$text;?></p>
-    <a href='<?=$this->url->create("comments/create/a/$answerId");?>'>Kommentera</a>
-    <?=$user;?>
-    <p><?=$created?></p>
+    <div>
+        <?=$user;?>
+        <span><sub><?=$created?></sub></span>
+    </div>
+    <div id='answer-actions'>
+        <span><a href='<?=$this->url->create("comments/create/a/$answerId");?>'>Kommentera</a></span>
+    </div>
 </div>

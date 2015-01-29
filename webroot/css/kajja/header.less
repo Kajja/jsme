@@ -1,12 +1,22 @@
 /**
  * Layout for header
  */
-.header {
+header {
     margin-bottom: @magicNumber;
     border-bottom-right-radius: @borderRadius;
     border-bottom-left-radius: @borderRadius;
-    background-color: @pageBackground;
-    font-family: @fontFamilyOldenburg;
+    font-family: @fontFamilyHeadings;
+    div {
+        display: inline-block;
+        float: left;
+    }
+}
+
+#header-user {
+    float: right;
+    p {
+        margin: 0;
+    }
 }
 
 .thin {
@@ -24,4 +34,9 @@
 
 #header {
     display: inline-block;
+}
+
+.sitetitle {
+    font-family: @fontFamilySiteTitle;
+    font-size: @fontSizeSiteTitle;
 }

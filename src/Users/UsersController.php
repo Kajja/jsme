@@ -30,8 +30,6 @@ use \Anax\DI\IInjectionaware,
 
         // Set class on body-element for styling
         $this->theme->setVariable('bodyClasses', 'page-container');
-
-        $this->theme->setTitle('Användare');
     }
 
 
@@ -41,6 +39,16 @@ use \Anax\DI\IInjectionaware,
      */
     public function loginAction() {
 
+        // Check if logged in                          TODO: Flytta ut all login/logout funk
+        if ($this->session->has('logged_in_userid')) {
+
+            $this->views->add('base/page', [
+                'title'     => '',
+                'content'   => 'Du är redan inloggad']);
+
+            return false;
+        }
+
         $form = $this->loginForm();
 
         //Check if the email and password has a match
@@ -49,19 +57,27 @@ use \Anax\DI\IInjectionaware,
             function($form) {
                 $this->session->set('logged_in_userid', $this->logInUser->id); //TODO: Inte så snyggt
                 $this->session->set('logged_in_usermail', $this->logInUser->email); //TODO: Inte så snyggt
+                $this->session->set('logged_in_username', $this->logInUser->name); //TODO: Inte så snyggt
 
-                // Ladda om den sida som man var på när man klickade på login
-                //$this->response->redirect($this->request->getPost('redirect'));
+                // Redirect to the user profile
+                $url = $this->url->create('users/profile/' . $this->logInUser->id);
+                $this->response->redirect($url);
             },
             // If the check fails
             function($form) {
-                $form->addOutput('Något gick fel');
+                $form->addOutput('Fel email eller lösenord');
+                $url = $this->url->create('users/login');
+                $this->response->redirect($url);
             }
         );
 
+
+        $this->theme->setTitle('Login');
+        $this->views->addString('<h3>Login</h3><hr>');
+
         // Add the created form to a view
         $this->views->add('base/page', [
-            'title'     => 'Login',
+            'title'     => '',
             'content'   => $form->getHTML()
         ]);
     }
@@ -85,7 +101,7 @@ use \Anax\DI\IInjectionaware,
                 'value' => isset($values['mail']) ? $values['mail'] : ''          
             ], 
             'password' => [
-                'type' => 'text',
+                'type' => 'password',
                 'label' => 'Lösenord:',
                 'required' => true,
                 'validation' => ['not_empty'],
@@ -120,6 +136,7 @@ use \Anax\DI\IInjectionaware,
         // Clear the session variables
         $this->session->set('logged_in_userid', null); // null räknas som unset
         $this->session->set('logged_in_usermail', null); // null räknas som unset
+        $this->session->set('logged_in_username', null); // null räknas som unset
 
         // Reload current page
 //        $this->response->redirect($this->request->getPost('redirect'));
@@ -133,19 +150,18 @@ use \Anax\DI\IInjectionaware,
     public function listAction() {
 
         // Use the model to get all stored users
-        $allUsers = $this->userModel->findAll();
+        $allUsers = $this->userModel->findAll('name ASC');
 
-        $colIndex = 1;
-        $colMax = 4;                        // TODO: Inte bra att ha detta beroende här
+
+        $this->theme->setTitle('Användare');
+        $this->views->addString('<h3>Användare</h3><hr>');
         foreach ($allUsers as $user) {
             $values = $user->getProperties();
-            $this->views->add('user/user', [
-                'userValues' => $values,
-                'userId' => $values['id']
-            ], 'panel-col-' . $colIndex);
+            $this->views->add('user/abstract', [
+                'userId' => $values['id'],
+                'user'   => $this->userHTMLAction($values['id'])
+            ]);
 
-            // Lay out a users info in a panel, ordered in columns
-            $colIndex === $colMax ? $colIndex = 1 : $colIndex++;
         }
     }
 
@@ -154,7 +170,7 @@ use \Anax\DI\IInjectionaware,
      *  Retrieve the user with the specified id and display in view
      *
      */
-    public function idAction($id = null)
+    public function idAction($id = null, $display = true)
     {
         if (!isset($id)) {
             die('Missing id');
@@ -162,12 +178,14 @@ use \Anax\DI\IInjectionaware,
         // Use the model to retrieve the specified user
         $user = $this->userModel->find($id);
 
-        // Display user information in view
-        $this->views->add('user/user', [
-            'userValues' => $user->getProperties()
-        ]);
+        if ($display) {
+            // Display user information in view
+            $this->views->add('user/user', [
+                'userValues' => $user->getProperties()
+            ]);
+        }
 
-
+        return $user;
     }
 
     /**
@@ -177,37 +195,45 @@ use \Anax\DI\IInjectionaware,
     public function profileAction($id = null)
     {
         if (!isset($id)) {
-            die('Missing id');
+            die('Missing id - profileAction');
         }
         // Use the model to retrieve the specified user
         $user = $this->userModel->find($id);
+        $values = $user->getProperties();
 
         // Display user information in view
+        $this->theme->setTitle('Användare');
         $this->views->add('user/profile', [
-            'userValues' => $user->getProperties(),
+            'userName' => $values['name'],
+            'email' => $values['email'],
+            'created' => date('Y-m-d', strtotime($values['created'])),
             'id' => $user->id
         ]);
 
-        // List the users questions
-        $this->dispatcher->forward([
-            'controller' => 'question',
-            'action'     => 'userQuestions',
-            'params'     => [$id]
-        ]);
-
         // List questions that the user has answered
+        $this->views->addString('<h3>Besvarade frågor</h3><hr>', 'panel-col-1');
         $this->dispatcher->forward([
             'controller' => 'question',
             'action'     => 'answeredBy',
-            'params'     => [$id]
+            'params'     => [$id, 'panel-col-1']
         ]);
+
+        // List the users questions
+        $this->views->addString('<h3>Ställda frågor</h3><hr>', 'panel-col-2');
+        $this->dispatcher->forward([
+            'controller' => 'question',
+            'action'     => 'userQuestions',
+            'params'     => [$id, 'panel-col-2']
+        ]);
+
+
     }
 
     /**
      * Creates a HTML-representation of a users info
      *
      */
-    public function userHTMLAction($id = null)  // TODO: Kanske inte så bra idé, fast bra att samla på ett ställe
+    public function userHTMLAction($id = null, $imgSize = '30')  // TODO: Kanske inte så bra idé, fast bra att samla på ett ställe
     {
         if (!isset($id)) {
             die('Missing id');
@@ -216,11 +242,10 @@ use \Anax\DI\IInjectionaware,
         // Use the model to retrieve the specified user
         $user = $this->userModel->find($id);
 
-        $html = '<div>' .
-                    '<a href="' . $this->url->create('users/profile/' . $user->id) . '">' .
+        $html = '<div class="user-info">' . // Borde använda user vy istället för HTML här!
                     "<img src='https://www.gravatar.com/avatar/" .
-                     md5(strtolower(trim($user->email))) . "?s=30&d=identicon' alt='Profilbild'/>" .
-                    $user->name . '</a></div>';
+                     md5(strtolower(trim($user->email))) . "?s=$imgSize&d=identicon' alt='Profilbild'/>" .
+                    "<span><a href='" . $this->url->create('users/profile/' . $user->id) . "'>" . $user->name . '</a></span></div>';
 
         return $html;
     }
@@ -236,6 +261,33 @@ use \Anax\DI\IInjectionaware,
 
         // Create HTML form for user creation
         $form = $this->userForm();
+
+        // Adds button and callback
+        $form->create([], [
+            'password' => [
+                'type' => 'password',
+                'label' => 'Lösenord:',
+                'required' => true,
+                'validation' => ['not_empty'],
+                'value' => ''          
+            ],
+            'Skapa' => [
+                'type' => 'submit',
+                'callback' => function($form) {
+
+                    // Check that the email has not already been registred
+                    $matchedUsers = $this->userModel->query()
+                        ->where('email = ?')
+                        ->execute([$form->Value('mail')]);
+
+                    if(!empty($matchedUsers)) {
+                        return false;
+//                        return $values['id'] === $matchedUsers[0]->id;
+                    }
+                    return true;
+                }
+            ]
+        ]);
 
         // Form check: 
         //      not submitted => ($form->check = null)
@@ -263,13 +315,19 @@ use \Anax\DI\IInjectionaware,
             },
             // If the check fails
             function($form) {
-                $form->addOutput('Något gick fel');
+                $form->addOutput('Det fanns redan en användare registrerad med den emailen');
+                $url = $this->url->create('users/add');
+                $this->response->redirect($url);
             }
         );
 
+
+        $this->theme->setTitle('Skapa användare');
+        $this->views->addString('<h3>Skapa användare</h3><hr>');
+
         // Add the created form to a view
         $this->views->add('base/page', [
-            'title'     => 'Skapa användare',
+            'title'     => '',
             'content'   => $form->getHTML()
         ]);
     }
@@ -281,8 +339,19 @@ use \Anax\DI\IInjectionaware,
      */
     public function updateAction($id = null) {
 
+        $this->theme->setTitle('Uppdatera profil');
         if (!isset($id)) {
             die('Missing id');
+        }
+
+        // Check the right user is logged in
+        if ($this->session->get('logged_in_userid') !== $id) {
+
+            $this->views->add('base/page', [
+                'title'     => '',
+                'content'   => 'Du är inte inloggad som den användare du vill uppdatera.']);
+
+            return false;
         }
 
         // The user-object, i.e. userModel is populated with data
@@ -292,31 +361,73 @@ use \Anax\DI\IInjectionaware,
         // Create HTML-form and populate it with values from database
         $form = $this->userForm($this->userModel->getProperties());
 
+        // Adds button and callback
+        $form->create([], [
+            'password' => [
+                'type' => 'password',
+                'label' => 'Lösenord:',
+                'required' => false,
+                'value' => ''          
+            ],
+            'Uppdatera' => [
+                'type' => 'submit',
+                'callback' => function($form) use ($id){
+
+                    // Check that the email has not already been registred
+                    $matchedUsers = $this->userModel->query()
+                        ->where('email = ?')
+                        ->execute([$form->Value('mail')]);
+
+                    if(!empty($matchedUsers)) {
+                        return $id === $matchedUsers[0]->id;
+                    }
+                    return true;
+                }
+            ]
+        ]);
+
+        $form->addOutput('Lämnar du lösenordsrutan tom så uppdateras inte lösenordet');
+
         $form->check(
             // If the check is successful, update user
-            function($form) {
+            function($form) use ($id) {
 
                 $now = date(DATE_RFC2822);
              
-                $this->userModel->save([
+                $newValues = [
                     'name'      => $form->Value('name'),
                     'email'     => $form->Value('mail'),
                     'changed'   => $now
-                ]);
+                ];
 
-                // Redirect to display the created user
+                // Update password if the password field is not empty
+                if ($form->Value('password') !== '') {
+                    $newValues['passw'] = password_hash($form->Value('password'), PASSWORD_DEFAULT);
+                }
+
+                // Save the new information
+                $this->userModel->save($newValues);
+
+                // Update the logged in information
+                $this->session->set('logged_in_usermail', $form->Value('mail'));
+                $this->session->set('logged_in_username', $form->Value('name'));
+
+                // Redirect to display the updated user
                 $url = $this->url->create('users/profile/' . $this->userModel->id);
                 $this->response->redirect($url);
             },
             // If the check fails
-            function($form) {
-                $form->addOutput('Något gick fel');
+            function($form) use ($id) {
+                $form->addOutput('Det fanns redan en användare registrerad med den emailen');
+                $url = $this->url->create('users/update/' . $id);
+                $this->response->redirect($url);
             }
         );
 
         // Add the created form to a view
+        $this->views->addString('<h3>Uppdatera profil</h3><hr>');
         $this->views->add('base/page', [
-            'title'     => 'Uppdatera profil',
+            'title'     => '',
             'content' => $form->getHTML()
         ]);
     }
@@ -349,28 +460,6 @@ use \Anax\DI\IInjectionaware,
                 'validation' => ['not_empty'],
                 'value' => isset($values['email']) ? $values['email'] : ''          
             ],
-            'password' => [
-                'type' => 'password',
-                'label' => 'Lösenord:',
-                'required' => true,
-                'validation' => ['not_empty'],
-                'value' => isset($values['passw']) ? $values['passw'] : ''          
-            ],
-            'skapa/uppdatera' => [
-                'type' => 'submit',
-                'callback' => function($form) use ($values) {
-
-                    // Check that the email has not already been registred
-                    $matchedUsers = $this->userModel->query() //TODO: Funkar inte vid uppdatering
-                        ->where('email = ?')
-                        ->execute([$form->Value('mail')]);
-
-                    if(!empty($matchedUsers)) {
-                        return $values['id'] === $matchedUsers[0]->id;
-                    }
-                    return true;
-                }
-            ]
         ]);
         return $form;
     }
@@ -544,58 +633,21 @@ use \Anax\DI\IInjectionaware,
             'title' => 'Papperskorg',
             'users' => $userInfo
         ]);
-
     }
-
 
     /**
-     * Builds user information to be displayed in list of users
+     * Shows the objects that have been soft-deleted
      *
-     * @param array which actions to display for every user
-     * @param array with User-objects
-     *
-     * @return array with userinformation
      */
-/*    public function userInfoBuilder($actions, $users)
+    public function activeUsersAction($numOf, $area = 'main')
     {
-        $userInfo = [];
-        foreach ($users as $key => $user) {
-
-            $id = $user->id;
-
-            $userInfo[$key]['id'] = $id;
-            $userInfo[$key]['acronym'] = 
-                "<a href=\"{$this->url->create('users/id/' . $id)}\">" . $user->acronym . '</a>';
-            $userInfo[$key]['name'] = $user->name;
-
-            // Adds action links to manipulate the user
-            if (array_search('update', $actions) !== false) {
-                $userInfo[$key][] = 
-                    "<a href=\"{$this->url->create('users/update/' . $id)}\"  title='Uppdatera'><i class='fa fa-pencil'></i></a>";
-            }
-            if (array_search('inactivate', $actions) !== false) {
-                $userInfo[$key][] = 
-                    "<a href=\"{$this->url->create('users/inactivate/' . $id)}\" title='Inaktivera'><i class='fa fa-pause'></i></a>";
-            }
-            if (array_search('activate', $actions) !== false) {
-                $userInfo[$key][] = 
-                    "<a href=\"{$this->url->create('users/activate/' . $id)}\" title='Aktivera'><i class='fa fa-flash'></i></a>";
-            }
-            if (array_search('soft-delete', $actions) !== false) {
-                $userInfo[$key][] = 
-                    "<a href=\"{$this->url->create('users/softdelete/' . $id)}\" title='Släng'><i class='fa fa-trash'></i></a>";
-            }
-            if (array_search('undo-delete', $actions) !== false) {
-                $userInfo[$key][] = 
-                    "<a href=\"{$this->url->create('users/undodelete/' . $id)}\" title='Plocka upp ur papperskorg'><i class='fa fa-recycle'></i></a>";
-            }
-            if (array_search('hard-delete', $actions) !== false) {
-                $userInfo[$key][] = 
-                    "<a href=\"{$this->url->create('users/delete/' . $id)}\" title='Radera'><i class='fa fa-remove'></i></a>";
-            }
+        $users = $this->userModel->activeUsers($numOf);
+        foreach ($users as $user) {
+            $values = $user->getProperties();
+            $this->views->add('user/abstract', [
+                'userId' => $values['id'],
+                'user'   => $this->userHTMLAction($values['id'])
+            ], $area);
         }
-        return $userInfo;
     }
-*/
-
  }

@@ -1,4 +1,5 @@
-a:4:{s:4:"root";s:19:"../kajja/kajja.less";s:8:"compiled";s:40029:"@import url(http://fonts.googleapis.com/css?family=Oldenburg);
+a:4:{s:4:"root";s:19:"../kajja/kajja.less";s:8:"compiled";s:40241:"@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1864,21 +1865,11 @@ body:after {
 .shadow {
   box-shadow: 2px 2px 3px #85795b;
 }
-.fixedNav {
-  position: fixed;
-  top: 0px;
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
-}
-body.page-container #wrapper {
-  margin-top: 88px;
-}
 #wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
-  font-family: 'Oldenburg', sans-serif;
+  font-family: 'Roboto', sans-serif;
   *zoom: 1;
 }
 #wrapper:before,
@@ -1992,7 +1983,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oldenburg', sans-serif;
+  font-family: 'Roboto Slab', serif;
   margin-top: 0;
   margin-bottom: 22px;
 }
@@ -2226,16 +2217,25 @@ article tfoot,
   font-style: italic;
 }
 hr {
-  color: #ccc;
-  border-color: #ccc;
+  color: #000000;
+  border-color: #9f9274;
   margin: 22px auto;
 }
-.header {
+header {
   margin-bottom: 22px;
   border-bottom-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
-  background-color: white;
-  font-family: 'Oldenburg', sans-serif;
+  font-family: 'Roboto Slab', serif;
+}
+header div {
+  display: inline-block;
+  float: left;
+}
+#header-user {
+  float: right;
+}
+#header-user p {
+  margin: 0;
 }
 .thin {
   height: 66px;
@@ -2251,6 +2251,14 @@ hr {
 }
 #header {
   display: inline-block;
+}
+.sitetitle {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em;
+}
+#flash span,
+#flash div {
+  vertical-align: middle;
 }
 .page {
   border-radius: 0.5em;
@@ -2304,72 +2312,24 @@ hr {
   padding-top: 21px;
   padding-bottom: 22px;
 }
-div .comment-form {
-  font-family: Verdana, sans-serif;
+.comment {
+  font-size: 0.875em;
+  margin-left: 22px;
+  background-color: #d3cdbf;
+  margin-bottom: 22px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 3px #85795b;
 }
-div .comment {
-  margin-bottom: 1em;
-  font-family: Verdana, sans-serif;
-}
-div .comment > * {
+.comment p {
   display: inline-block;
-}
-#profile {
-  vertical-align: top;
-  width: 3em;
-  height: auto;
-  padding: 0 0.2em 0 0.2em;
-}
-div .comment a {
-  text-decoration: none;
-  font-weight: bold;
-}
-div .comment a:link {
-  color: green;
-}
-div .comment a:visited {
-  color: grey;
-}
-div .comment a {
-  text-decoration: none;
-  font-weight: bold;
-}
-div .comment header,
-div .comment footer {
-  color: grey;
-  font-size: 0.8em;
-  background-color: white;
-}
-#name {
-  color: green;
-}
-div .comment main {
-  padding-left: 1em;
-}
-div .comment .button {
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  border-radius: 0.5em;
-  border-color: grey;
-  background-color: lightgrey;
-  text-decoration: none;
-  font-weight: normal;
-  font-color: grey;
-}
-#nav {
-  position: fixed;
-  top: 0px;
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
+  margin-bottom: 0;
+  margin-left: 3px;
 }
 #navbar {
   margin-bottom: 20px;
 }
 .navbar {
-  background-color: #FAEB8C;
-  border-bottom-left-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-  min-height: 66px;
+  background-color: #FCD860;
   box-shadow: 2px 2px 3px #85795b;
 }
 .navbar ul {
@@ -2385,7 +2345,7 @@ div .comment .button {
 }
 .navbar a {
   display: block;
-  padding: 1em;
+  padding: 11px;
   text-decoration: none;
   color: inherit;
   white-space: nowrap;
@@ -2397,7 +2357,7 @@ div .comment .button {
 .navbar li.selected-parent,
 .navbar li.selected {
   color: #222;
-  border-color: #222;
+  background-color: #f1bb05;
 }
 .navbar ul ul {
   background-color: #fff;
@@ -2431,17 +2391,71 @@ div .comment .button {
   box-shadow: 2px 2px 3px #85795b;
 }
 .tag {
+  display: inline-block;
   background-color: white;
   border-radius: 0.5em;
-  padding: 22px 22px 22px 22px;
+  padding: 11px;
   margin-right: 22px;
   margin-bottom: 22px;
+  box-shadow: 2px 2px 3px #85795b;
 }
 .abstract {
   background-color: white;
   border-radius: 0.5em;
   padding: 22px 22px 22px 22px;
   margin-bottom: 22px;
+  text-align: left;
+  box-shadow: 2px 2px 3px #85795b;
+}
+.abstract a:link {
+  color: #33b;
+  text-decoration: none;
+}
+.abstract a :hover {
+  color: #A73C41;
+}
+.abstract a:visited {
+  color: #33b;
+}
+#question-actions {
+  float: right;
+}
+#qanswer {
+  float: left;
+}
+.question-full {
+  padding: 22px 22px 22px 22px;
+}
+.user-abstract {
+  display: inline-block;
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 11px;
+  margin-right: 22px;
+  margin-bottom: 22px;
+  box-shadow: 2px 2px 3px #85795b;
+}
+.user-profile {
+  padding: 22px 22px 22px 22px;
+}
+.user-profile #profile-content {
+  display: inline-block;
+}
+.user-profile #update {
+  float: right;
+}
+.user-info img {
+  margin-right: 5px;
+}
+.answer {
+  padding: 22px 22px 22px 22px;
+  background-color: #DAE0E3;
+}
+.answer p {
+  margin-bottom: 11px;
+}
+#answer-actions {
+  float: right;
 }
 @media (max-width: 480px) {
   #panel-col-1,
@@ -2530,7 +2544,7 @@ div .comment .button {
   #panel-col-4 {
     display: inline;
     float: left;
-    width: 22.222222222222%;
+    width: 47.222222222222%;
     margin: 0 1.3888888888889%;
     margin-bottom: 22px;
   }
@@ -2544,4 +2558,4 @@ div .comment .button {
     margin-bottom: 22px;
   }
 }
-";s:5:"files";a:32:{s:51:"C:\xampp\htdocs\qasite\webroot\css\kajja\kajja.less";i:1421936913;s:55:"C:\xampp\htdocs\qasite\webroot\css\kajja\normalize.less";i:1413369223;s:82:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\font-awesome.less";i:1412770031;s:79:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\variables.less";i:1412770031;s:76:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\mixins.less";i:1412770031;s:74:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\path.less";i:1412770031;s:74:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\core.less";i:1412770031;s:76:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\larger.less";i:1412770031;s:81:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\fixed-width.less";i:1412770031;s:74:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\list.less";i:1412770031;s:85:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\bordered-pulled.less";i:1412770031;s:78:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\spinning.less";i:1412770031;s:85:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\rotated-flipped.less";i:1412770031;s:77:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\stacked.less";i:1412770031;s:75:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\icons.less";i:1412770031;s:50:"C:\xampp\htdocs\qasite\webroot\css\kajja\grid.less";i:1413369222;s:56:"C:\xampp\htdocs\qasite\webroot\css\kajja\css3mixins.less";i:1413369222;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\mixins.less";i:1413369223;s:58:"C:\xampp\htdocs\qasite\webroot\css\kajja\kajja-mixins.less";i:1413369222;s:55:"C:\xampp\htdocs\qasite\webroot\css\kajja\variables.less";i:1413369223;s:55:"C:\xampp\htdocs\qasite\webroot\css\kajja\structure.less";i:1413369223;s:56:"C:\xampp\htdocs\qasite\webroot\css\kajja\typography.less";i:1413369223;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\header.less";i:1421750477;s:50:"C:\xampp\htdocs\qasite\webroot\css\kajja\page.less";i:1415372875;s:51:"C:\xampp\htdocs\qasite\webroot\css\kajja\panel.less";i:1413369223;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\footer.less";i:1413369222;s:54:"C:\xampp\htdocs\qasite\webroot\css\kajja\comments.less";i:1413369222;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\navbar.less";i:1413369223;s:55:"C:\xampp\htdocs\qasite\webroot\css\kajja\jumbotron.less";i:1413369222;s:49:"C:\xampp\htdocs\qasite\webroot\css\kajja\tag.less";i:1421936991;s:54:"C:\xampp\htdocs\qasite\webroot\css\kajja\question.less";i:1421936978;s:56:"C:\xampp\htdocs\qasite\webroot\css\kajja\responsive.less";i:1416141139;}s:7:"updated";i:1421937030;}
+";s:5:"files";a:35:{s:51:"C:\xampp\htdocs\qasite\webroot\css\kajja\kajja.less";i:1422528594;s:55:"C:\xampp\htdocs\qasite\webroot\css\kajja\normalize.less";i:1413369223;s:82:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\font-awesome.less";i:1412770031;s:79:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\variables.less";i:1412770031;s:76:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\mixins.less";i:1412770031;s:74:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\path.less";i:1412770031;s:74:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\core.less";i:1412770031;s:76:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\larger.less";i:1412770031;s:81:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\fixed-width.less";i:1412770031;s:74:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\list.less";i:1412770031;s:85:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\bordered-pulled.less";i:1412770031;s:78:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\spinning.less";i:1412770031;s:85:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\rotated-flipped.less";i:1412770031;s:77:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\stacked.less";i:1412770031;s:75:"C:\xampp\htdocs\qasite\webroot\css\fonts\font-awesome-4.2.0\less\icons.less";i:1412770031;s:50:"C:\xampp\htdocs\qasite\webroot\css\kajja\grid.less";i:1413369222;s:56:"C:\xampp\htdocs\qasite\webroot\css\kajja\css3mixins.less";i:1413369222;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\mixins.less";i:1413369223;s:58:"C:\xampp\htdocs\qasite\webroot\css\kajja\kajja-mixins.less";i:1422522309;s:55:"C:\xampp\htdocs\qasite\webroot\css\kajja\variables.less";i:1422528789;s:55:"C:\xampp\htdocs\qasite\webroot\css\kajja\structure.less";i:1422528317;s:56:"C:\xampp\htdocs\qasite\webroot\css\kajja\typography.less";i:1422470468;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\header.less";i:1422528691;s:51:"C:\xampp\htdocs\qasite\webroot\css\kajja\flash.less";i:1422528984;s:50:"C:\xampp\htdocs\qasite\webroot\css\kajja\page.less";i:1415372875;s:51:"C:\xampp\htdocs\qasite\webroot\css\kajja\panel.less";i:1413369223;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\footer.less";i:1413369222;s:54:"C:\xampp\htdocs\qasite\webroot\css\kajja\comments.less";i:1422479326;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\navbar.less";i:1422529328;s:55:"C:\xampp\htdocs\qasite\webroot\css\kajja\jumbotron.less";i:1413369222;s:49:"C:\xampp\htdocs\qasite\webroot\css\kajja\tag.less";i:1422570872;s:54:"C:\xampp\htdocs\qasite\webroot\css\kajja\question.less";i:1422568907;s:50:"C:\xampp\htdocs\qasite\webroot\css\kajja\user.less";i:1422570948;s:52:"C:\xampp\htdocs\qasite\webroot\css\kajja\answer.less";i:1422569411;s:56:"C:\xampp\htdocs\qasite\webroot\css\kajja\responsive.less";i:1422438584;}s:7:"updated";i:1422570952;}

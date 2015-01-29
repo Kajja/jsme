@@ -1,1 +1,1 @@
-Siten är byggd på [Anax-MVC](https://github.com/mosbth/Anax-MVC) och är en del av kursen *Databasdrivna webbapplikationer med PHP och MVC-ramverk*.
+*Detta är en siten som handlar om allt som har att göra med cyklar. Skapad av Mikael Feuk.*

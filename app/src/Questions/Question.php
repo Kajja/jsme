@@ -42,8 +42,14 @@ class Question extends CDatabaseModel
     public function questionsAnsweredBy($userId)
     {
         $table = $this->getSource();
+    /*    
         return $this->join(['answer', $table], "{$table}.id = question_id")
             ->where('answer.user_id = ?')->execute([$userId]);
+            
+    */
+        return $this->select("*, MIN('{$table}.id')")->from('answer')
+            ->joinB($table, "{$table}.id = question_id")
+            ->where('answer.user_id = ?')->groupBy("{$table}.id")->execute([$userId]);
     }
 
     /**

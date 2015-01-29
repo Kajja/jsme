@@ -35,23 +35,18 @@ class CommentsController implements IInjectionaware
      */
     public function createAction($type, $objectId)
     {
-        /*
-        // Shows the question <<-- Detta funkar inte
-        $this->dispatcher->forward([
-            'controller' => 'question',
-            'action'     => 'show',
-            'params'     => [$questionId]
-        ]);
-        */
+      
+        $this->theme->setTitle('Kommentera');
+        $this->views->addString('<h3>Kommentera</h3><hr>');
 
         // Check if logged in                          TODO: Flytta ut all login/logout funk
         if (!$this->session->has('logged_in_userid')) {
 
-        $this->views->add('base/page', [
-            'title'     => 'Din kommentar',
-            'content'   => 'Du måste vara inloggad för att kunna kommentera'
-        ]);
-            return false;
+            $this->views->add('base/page', [
+                'title'     => '',
+                'content'   => 'Du måste vara inloggad för att kunna kommentera'
+            ]);
+                return false;
         }
 
         $form = $this->commentForm($objectId);
@@ -70,16 +65,30 @@ class CommentsController implements IInjectionaware
                     'created'       => $now,
                 ]);
 
+                // Get the related question id if commenting an answer
+                if ($type === 'a') {
+                    $answer = $this->dispatcher->forward([
+                        'controller'    => 'answers',
+                        'action'        => 'id',
+                        'params'        => [$objectId]
+                    ]);
+                    $objectId = $answer->question_id;
+                }
+
+                $url = $this->url->create('question/id/' . $objectId);
+                $this->response->redirect($url);
             },
             // If the check fails
-            function($form) {
+            function($form) use ($type, $objectId) {
                 $form->addOutput('Något gick fel');
+                $url = $this->url->create('comments/create/'. $type . '/' . $objectId);
+                $this->response->redirect($url);
             }
         );
 
 
         $this->views->add('base/page', [
-            'title'     => 'Din kommentar',
+            'title'     => '',
             'content'   => $form->getHTML()
         ]);
     }
@@ -120,9 +129,18 @@ class CommentsController implements IInjectionaware
 
         foreach ($comments as $comment) {
             $values = $comment->getProperties();
+
+            $user = $this->dispatcher->forward([
+                'controller'    => 'users',
+                'action'        => 'id',
+                'params'        => [$values['user_id'], false]
+            ]);
+
             $this->views->add('comment/comment', [
                 'text'  => $this->textFilter->doFilter($values['text'], 'shortcode, markdown'),
-                'created' => $values['created']
+                'user'  => $user->name,
+                'userId' => $user->id,
+                'created' => date('Y-m-d, H:i:s', strtotime($values['created']))
             ]);
         }
     }

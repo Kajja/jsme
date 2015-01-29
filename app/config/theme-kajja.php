@@ -22,9 +22,9 @@ return [
      */
     'views' => [
         [
-            'region' => 'header', 
+            'region' => 'flash', 
             'template' => 'qasite/header',
-            'data' => ['title' => 'Allt om cyklar'],
+            'data' => ['title' => 'Cyklig'],
             'sort' => -1
         ],
         [

@@ -28,8 +28,6 @@ class QuestionController implements IInjectionaware
 
         // Set class on body-element for styling
         $this->theme->setVariable('bodyClasses', 'page-container');
-
-        $this->theme->setTitle('Fråga');
     }
 
 
@@ -39,6 +37,11 @@ class QuestionController implements IInjectionaware
      */
     public function createAction()
     {
+
+
+        $this->theme->setTitle('Ställ fråga');
+        $this->views->addString('<h3>Ställ fråga</h3><hr>');
+
         // Check if logged in                          TODO: Flytta ut all login/logout funk
         if (!$this->session->has('logged_in_userid')) {
 
@@ -84,9 +87,9 @@ class QuestionController implements IInjectionaware
                     ]);
                 }
 
-                // Redirect to display the created user
-//                $url = $this->url->create('question/id/' . $this->questionModel->id);
-//                $this->response->redirect($url);
+                // Redirect to display the created question
+                $url = $this->url->create('question/id/' . $this->questionModel->id);
+                $this->response->redirect($url);
             },
             // If the check fails
             function($form) {
@@ -95,7 +98,7 @@ class QuestionController implements IInjectionaware
         );
 
         $this->views->add('question/form', [
-            'title'     => 'Ställ din fråga',
+            'title'     => '',
             'content'   => $form->getHTML()]
         );
 
@@ -160,7 +163,9 @@ class QuestionController implements IInjectionaware
         // Use the model to get all stored questions
         $allQuestions = $this->questionModel->findAll(); // Om inte array?
 
-        $this->display($allQuestions);
+        $this->theme->setTitle('Frågor');
+        $this->views->addString('<h3>Frågor</h3><hr>');
+        $this->displayShort($allQuestions);
     }
 
 
@@ -178,8 +183,11 @@ class QuestionController implements IInjectionaware
 
         $values = $question->getProperties();
 
+        $this->theme->setTitle('Fråga');
+        $this->views->addString('<h3>Fråga</h3><hr>');
+
         // Display question in view
-        $this->display([$question]);
+        $this->displayFull([$question]);
 
         // Show creator
 
@@ -198,6 +206,7 @@ class QuestionController implements IInjectionaware
         ]);
 
         // List answers
+        $this->views->addString('<h3>Svar</h3><hr>');
         $this->dispatcher->forward([
             'controller' => 'answers',
             'action'     => 'list',
@@ -225,7 +234,10 @@ class QuestionController implements IInjectionaware
         }
 
         $questions = $this->questionModel->taggedQuestions($tag);
-        $this->display($questions);
+
+        $this->theme->setTitle('Frågor med taggen');
+        $this->views->addString('<h3>Frågor med taggen</h3><hr>');
+        $this->displayShort($questions);
     }
 
 
@@ -236,30 +248,59 @@ class QuestionController implements IInjectionaware
     public function showAction($id) {
 
          $question = $this->questionModel->find($id);
-         $this->display([$question]);
+         $this->displayShort([$question]);
     }
 
     /**
-     *  Display only question(s) i.e. no tags, answers ...
+     * Displays only fundamental information from the 
+     * question(s) i.e. no tags, answers ...
      *
      */
-    public function display($questions) {
-
+    public function displayShort($questions, $area = 'main') 
+    {
         foreach ($questions as $question) {
             $values = $question->getProperties();
+
             $user = $this->dispatcher->forward([
                 'controller'    => 'users',
-                'action'        => 'userHTML',
-                'params'        => [$values['user_id']]
+                'action'        => 'id',
+                'params'        => [$values['user_id'], false]
             ]);
 
             $this->views->add('question/abstract', [
                 'questionId'    => $values['id'],
                 'title'         => $values['title'],
                 'text'          => $this->textFilter->doFilter($values['text'], 'shortcode, markdown'),
-                'user'          => $user,
-                'created'       => $values['created']
+                'askedBy'       => $user->name,
+                'userId'        => $user->id,
+                'created'       => date('Y-m-d, H:i:s', strtotime($values['created']))
+            ], $area);
+        }
+    }
+
+    /**
+     * Displays the complete information from the 
+     * question(s) with related tags, answers ...
+     *
+     */
+    public function displayFull($questions, $area = 'main') 
+    {
+        foreach ($questions as $question) {
+            $values = $question->getProperties();
+
+            $userHTML = $this->dispatcher->forward([
+                'controller'    => 'users',
+                'action'        => 'userHTML',
+                'params'        => [$values['user_id']]
             ]);
+
+            $this->views->add('question/full', [
+                'questionId'    => $values['id'],
+                'title'         => $values['title'],
+                'text'          => $this->textFilter->doFilter($values['text'], 'shortcode, markdown'),
+                'askedBy'       => $userHTML,
+                'created'       => date('Y-m-d, H:i:s', strtotime($values['created']))
+            ], $area);
         }
     }
 
@@ -267,30 +308,29 @@ class QuestionController implements IInjectionaware
      *  Show the questions created by a certain user.
      *
      */
-    public function userQuestionsAction($userId)
+    public function userQuestionsAction($userId, $area = 'main')
     {
         $questions = $this->questionModel->userQuestions($userId);
-        $this->display($questions);
+        $this->displayShort($questions, $area);
     }
 
     /**
      *  Show the questions answered by a certain user.
      *
      */
-    public function answeredByAction($userId)
+    public function answeredByAction($userId, $area = 'main')
     {
         $questions = $this->questionModel->questionsAnsweredBy($userId);
-//        var_dump($questions);
-        $this->display($questions);
+        $this->displayShort($questions, $area);
     }
 
     /**
      *  Latest questions.
      *
      */
-    public function latestAction($numberOf)
+    public function latestAction($numberOf, $area)
     {
         $questions = $this->questionModel->latestQuestions($numberOf);
-        $this->display($questions);
+        $this->displayShort($questions, $area);
     }
 }

@@ -3,4 +3,29 @@
     border-radius: @borderRadius;
     padding: @magicNumber @magicNumber @magicNumber @magicNumber;    
     margin-bottom: @magicNumber;
+    text-align: left;
+    .shadow;
+    a {
+        &:link {
+            color: @anchorColor;
+            text-decoration: none;
+        }
+        :hover {
+            color: @hoverColor;
+        }
+        &:visited {
+            color: @anchorColor;
+        }
+    }
+}
+
+#question-actions {
+    float: right;
+}
+
+#qanswer {
+    float: left;
+}
+.question-full {
+    padding: @magicNumber @magicNumber @magicNumber @magicNumber;    
 }

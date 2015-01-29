@@ -11,7 +11,7 @@ body {
 
 a {
 	&:link {
-		color: @linkColor;
+		color: @fontColor;
 		text-decoration: none;
 	}
 	:hover {
@@ -277,7 +277,7 @@ article tfoot,
  * More
  */
 hr {
-  color: @colorBorderLight;  
-  border-color: @colorBorderLight;
+  color: lighten(@bodyColor);  
+  border-color: darken(@bodyColor, 10%);
   margin: @magicNumber auto;
 }

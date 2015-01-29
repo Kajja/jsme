@@ -37,13 +37,16 @@ class AnswersController implements IInjectionaware
         ]);
         */
 
+        $this->theme->setTitle('Svara');
+        $this->views->addString('<h3>Svara</h3><hr>');
+
         // Check if logged in                          TODO: Flytta ut all login/logout funk
         if (!$this->session->has('logged_in_userid')) {
 
-        $this->views->add('base/page', [
-            'title'     => 'Ditt svar',
-            'content'   => 'Du måste vara inloggad för att kunna svara'
-        ]);
+            $this->views->add('base/page', [
+                'title'     => '',
+                'content'   => 'Du måste vara inloggad för att kunna svara'
+            ]);
 
             return false;
         }
@@ -72,7 +75,7 @@ class AnswersController implements IInjectionaware
 
 
         $this->views->add('base/page', [
-            'title'     => 'Ditt svar',
+            'title'     => '',
             'content'   => $form->getHTML()
         ]);
 
@@ -111,6 +114,20 @@ class AnswersController implements IInjectionaware
     }
 
     /**
+     *  Retrieve the answer with the specified id.
+     */
+    public function idAction($id = null)
+    {
+        if (!isset($id)) {
+            die('Missing id');
+        }
+        // Use the model to retrieve the specified user
+        $answer = $this->answerModel->find($id);
+
+        return $answer;
+    }
+
+    /**
      *
      *
      *
@@ -126,11 +143,14 @@ class AnswersController implements IInjectionaware
                 'action'        => 'userHTML',
                 'params'        => [$values['user_id']]
             ]);
+
+//            $this->views->addString('<hr>');            
+
             $this->views->add('answer/answer', [
                 'text'  => $this->textFilter->doFilter($values['text'], 'shortcode, markdown'),
                 'answerId' => $values['id'],
                 'user' => $user,
-                'created' => $values['created']
+                'created' => date('Y-m-d, H:i:s', strtotime($values['created']))
             ]);
 
             $this->dispatcher->forward([

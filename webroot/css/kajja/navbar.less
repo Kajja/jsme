@@ -1,7 +1,3 @@
-#nav {
-  .fixedNav;
-}
-
 /**
  * Based on http://dbwebb.se/coachen/en-navbar-med-drop-down-meny-i-ren-html-och-css
  * Changed to only style li-items instead of a.
@@ -11,10 +7,9 @@
 }
 
 .navbar {
-  background-color: #FAEB8C;
-  border-bottom-left-radius: @borderRadius;
-  border-bottom-right-radius: @borderRadius;
-  min-height: @magicNumber * 3;
+  background-color: @navbarColor;
+//  border-bottom-left-radius: @borderRadius;
+//  border-bottom-right-radius: @borderRadius;
   .shadow;
 }
  
@@ -33,7 +28,7 @@
  
 .navbar a {
   display: block;
-  padding: 1em;
+  padding: @magicNumber/2;
   text-decoration: none;
   color: inherit;
   white-space: nowrap; 
@@ -47,7 +42,8 @@
 .navbar li.selected-parent, 
 .navbar li.selected {
   color: #222;
-  border-color: #222;
+//  border-color: #222;
+  background-color: darken(@navbarColor, 20%);
 }
 
 .navbar ul ul {

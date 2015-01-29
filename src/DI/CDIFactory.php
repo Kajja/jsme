@@ -35,7 +35,8 @@ class CDIFactory extends CDIFactoryDefault
 */
         // Database service (from mos vendor)
         $this->set('db', function() {
-            $db = new \Mos\Database\CDatabaseBasic();
+//            $db = new \Mos\Database\CDatabaseBasic();
+            $db = new \Anax\MVC\CDatabaseExtended();
             $db->setOptions(require ANAX_INSTALL_PATH . 'cdatabase_config_sqlite.php');
             $db->connect();
             return $db;

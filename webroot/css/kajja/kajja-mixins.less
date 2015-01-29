@@ -1,17 +1,3 @@
 .shadow {
 	box-shadow: 2px 2px 3px darken(@bodyColor, 20%);
 }
-
-.fixedNav {
-	position: fixed;
-  	top: 0px;
-  	max-width: @maxWidth;
-  	margin: 0 auto;
-  	width: 100%;
- }
-
-.wrapperFixedNav() when (@navbarFixed) {
-	#wrapper {
-		margin-top: @magicNumber * 4;
-	}
-}
