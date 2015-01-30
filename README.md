@@ -33,4 +33,5 @@ Further, these external libraries are used:
 History
 -----------------------------------
 v0.1
+v0.2
 
