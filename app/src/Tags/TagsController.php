@@ -92,9 +92,9 @@ class TagsController implements IInjectionaware
      * Displays the most popular tags
      *
      */
-    public function popularTagsAction($area)
+    public function popularTagsAction($numOf, $area)
     {
-        $tags = $this->tagModel->popTags();
+        $tags = $this->tagModel->popTags($numOf);
 
         //Display the tags
         $this->display($tags, $area);

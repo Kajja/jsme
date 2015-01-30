@@ -34,13 +34,13 @@ class Tag extends CDatabaseModel
      *
      * @return array most popular tags
      */
-    public function popTags()
+    public function popTags($numOf = 5)
     {
         $tagTable = $this->getSource();
 
         return $this->select("{$tagTable}.id, name, COUNT(question_id) AS num_questions")
             ->joinB($tagTable, "{$tagTable}.id = tag_id")->from('questiontag')->groupBy('name') //TODO: join/joinB
-            ->orderBy('num_questions DESC')->execute();
+            ->orderBy('num_questions DESC')->limit($numOf)->execute();
     }
 
 }

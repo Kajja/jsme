@@ -158,8 +158,7 @@ use \Anax\DI\IInjectionaware,
         foreach ($allUsers as $user) {
             $values = $user->getProperties();
             $this->views->add('user/abstract', [
-                'userId' => $values['id'],
-                'user'   => $this->userHTMLAction($values['id'])
+                'user'   => $this->userHTMLAction($values)
             ]);
 
         }
@@ -233,19 +232,22 @@ use \Anax\DI\IInjectionaware,
      * Creates a HTML-representation of a users info
      *
      */
-    public function userHTMLAction($id = null, $imgSize = '30')  // TODO: Kanske inte så bra idé, fast bra att samla på ett ställe
+    public function userHTMLAction($values, $imgSize = '30')  // TODO: Kanske inte så bra idé, fast bra att samla på ett ställe
     {
-        if (!isset($id)) {
-            die('Missing id');
+        if (!is_array($values)) {
+            // Use the model to retrieve the specified user
+           $values = $this->userModel->find($values)->getProperties();
         }
 
-        // Use the model to retrieve the specified user
-        $user = $this->userModel->find($id);
-
-        $html = '<div class="user-info">' . // Borde använda user vy istället för HTML här!
-                    "<img src='https://www.gravatar.com/avatar/" .
-                     md5(strtolower(trim($user->email))) . "?s=$imgSize&d=identicon' alt='Profilbild'/>" .
-                    "<span><a href='" . $this->url->create('users/profile/' . $user->id) . "'>" . $user->name . '</a></span></div>';
+        $html = '<a href="' . $this->url->create('users/profile/' . $values['id']) . '">' . 
+                    '<div class="user-info">' .
+                        "<img src='https://www.gravatar.com/avatar/" .
+                            md5(strtolower(trim($values['email']))) . "?s={$imgSize}&d=identicon' alt='Profilbild'/>" .
+                        '<span>' . 
+                            $values['name'] . 
+                        '</span>' .
+                    '</div>' .
+                '</a>';
 
         return $html;
     }
@@ -645,8 +647,7 @@ use \Anax\DI\IInjectionaware,
         foreach ($users as $user) {
             $values = $user->getProperties();
             $this->views->add('user/abstract', [
-                'userId' => $values['id'],
-                'user'   => $this->userHTMLAction($values['id'])
+                'user'   => $this->userHTMLAction($values)
             ], $area);
         }
     }

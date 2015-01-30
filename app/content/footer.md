@@ -1,1 +1,1 @@
-*Detta är en siten som handlar om allt som har att göra med cyklar. Skapad av Mikael Feuk.*
+*Detta är en site där du kan diskutera allt som har med cyklar att göra. Skapad av Mikael Feuk.*

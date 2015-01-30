@@ -66,6 +66,9 @@ class AnswersController implements IInjectionaware
                     'created'   => $now,
                 ]);
 
+                // Return to the question
+                $url = $this->url->create('question/id/' . $form->Value('questionId'));
+                $this->response->redirect($url);
             },
             // If the check fails
             function($form) {

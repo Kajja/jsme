@@ -23,7 +23,7 @@ $app->router->add('', function() use ($app) {
     $app->dispatcher->forward([
         'controller' => 'tags',
         'action'     => 'popularTags',
-        'params'     => ['panel-col-2']
+        'params'     => [5, 'panel-col-2']
     ]);
 
     // The most active users
