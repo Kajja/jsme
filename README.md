@@ -15,6 +15,9 @@ To install the site:
 * Clone the repository.
 * Set up the database: The site comes included with a SQLite db, but if you want to use your own, you need to configure this in the file /cdatabase_config_sqlite.php (doesn't have to be an SQLite db). There is also an SQL-file to create the tables: /database_setup.sql.
 * Configure /webroot/.htacces for your environment.
+* These directories needs to be writable: QAsite/ (if you use the SQLite db that is included), QAsite/webroot/css/kajja, QAsite/webroot/css/stylephp.
+* The SQLite file, QAsite/.htqasite.sqlite, needs to be writable.
+* You might need to remove the directories under QAsite/vendor, remove composer.lock and do: composer install --no-dev
 
 
 Use of external libraries

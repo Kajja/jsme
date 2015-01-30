@@ -3,6 +3,7 @@
 // Bootstrapping (i.e. configurations, create framework object etc.)
 require __DIR__.'/config_with_app.php'; 
 
+$app->session();
 
 $app->router->add('', function() use ($app) {
 
