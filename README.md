@@ -8,6 +8,14 @@ License
 This software is free software and carries a MIT license.
 
 
+Installation
+--------------
+
+To install the site:
+* Clone the repository.
+* Set up the database: The site comes included with a SQLite db, but if you want to use your own, you need to configure this in the file /cdatabase_config_sqlite.php (doesn't have to be an SQLite db). There is also an SQL-file to create the tables: /database_setup.sql.
+* Configure /webroot/.htacces for your environment.
+
 
 Use of external libraries
 -----------------------------------
@@ -21,5 +29,5 @@ Further, these external libraries are used:
 
 History
 -----------------------------------
-
+v0.1
 
