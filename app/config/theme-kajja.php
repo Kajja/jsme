@@ -24,7 +24,7 @@ return [
         [
             'region' => 'flash', 
             'template' => 'qasite/header',
-            'data' => ['title' => 'Cyklig'],
+            'data' => ['title' => 'Me-sida för JS-kursen'],
             'sort' => -1
         ],
         [

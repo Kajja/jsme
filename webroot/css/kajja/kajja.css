@@ -2329,7 +2329,7 @@ header div {
   margin-bottom: 20px;
 }
 .navbar {
-  background-color: #FCD860;
+  background-color: #C9D9F0;
   box-shadow: 2px 2px 3px #85795b;
 }
 .navbar ul {
@@ -2357,7 +2357,7 @@ header div {
 .navbar li.selected-parent,
 .navbar li.selected {
   color: #222;
-  background-color: #f1bb05;
+  background-color: #79a1da;
 }
 .navbar ul ul {
   background-color: #fff;

@@ -19,36 +19,66 @@ return [
         ],
  
         // This is a menu item
-        'Questions'  => [
-            'text'  => 'Frågor',
-            'url'   => $this->di->get('url')->create('question/list'),
+        'Templates'  => [
+            'text'  => 'Mallar',
+            'url'   => 'mallar',
             'title' => 'Översikt frågor',
         ],
  
         // This is a menu item
-        'Tags' => [
-            'text'  =>'Taggar',
-            'url'   => $this->di->get('url')->create('tags/list'),
-            'title' => 'Alla taggar',
+        'Exercises ' => [
+            'text'  =>'Uppgifter',
+            'url'   => 'redovisning/kmom1',
+            'title' => 'Uppgifter',
+            'submenu' => [
+                'items' => [
+
+                    'item 1'  => [
+                        'text'  => 'Kmom1',   
+                        'url'   => $this->di->get('url')->create('redovisning/content/kmom1'),  
+                        'title' => 'Kursmoment 1'
+                    ],
+
+                    'item 2'  => [
+                        'text'  => 'Kmom2',   
+                        'url'   => $this->di->get('url')->create('redovisning/content/kmom2'), 
+                        'title' => 'Kursmoment 2'
+                    ],
+
+                    'item 3'  => [
+                        'text'  => 'Kmom3',   
+                        'url'   => $this->di->get('url')->create('redovisning/content/kmom3'),  
+                        'title' => 'Kursmoment 3'
+                    ],
+                    'item 4'  => [
+                        'text'  => 'Kmom4',   
+                        'url'   => $this->di->get('url')->create('redovisning/content/kmom4'), 
+                        'title' => 'Kursmoment 4'
+                    ],
+                    'item 5'  => [
+                        'text'  => 'Kmom5',   
+                        'url'   => $this->di->get('url')->create('redovisning/content/kmom5'),  
+                        'title' => 'Kursmoment 5'
+                    ],
+                    'item 6'  => [
+                        'text'  => 'Kmom6',   
+                        'url'   => $this->di->get('url')->create('redovisning/content/kmom6'), 
+                        'title' => 'Kursmoment 6'
+                    ],
+                    'item 7'  => [
+                        'text'  => 'Projekt',   
+                        'url'   => $this->di->get('url')->create('redovisning/content/proj'),  
+                        'title' => 'Projekt'
+                    ]
+                ]
+            ]
         ],
 
         // This is a menu item
-        'Users' => [
-            'text'  =>'Användare',
-            'url'   => $this->di->get('url')->create('users/list'),
-            'title' => 'Alla användare'
-        ],
-        // This is a menu item
-        'Question' => [
-            'text'  =>'Ställ fråga',
-            'url'   => $this->di->get('url')->create('question/create'),
-            'title' => 'Ställ en fråga'
-        ],
-        // This is a menu item
         'About' => [
-            'text'  =>'Om oss',
+            'text'  =>'Om',
             'url'   => $this->di->get('url')->create('about'),
-            'title' => 'Om oss'
+            'title' => 'Om'
         ],
     ], 
 

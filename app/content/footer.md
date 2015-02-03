@@ -1,1 +1,1 @@
-*Detta är en site där du kan diskutera allt som har med cyklar att göra. Skapad av Mikael Feuk.*
+*Detta är en site där jag redovisar mina JavaScript-uppgifter, bygger på Anax-MVC.*
