@@ -17,28 +17,23 @@ Som sagt ett "fritt" språk som tillåter att man programmerar i många olika pa
 
 Dessa exempelprogram gjorde jag, dvs. de som fanns i artikeln:
 
-* [Ändra storlek](/jsme/webroot/u_change_size/index.php)
+* Ändra storlek på div
 
-* [Flytta baddi](/jsme/webroot/u_baddi_move/index.php)
+* Flytta runt baddie
 
-* [Transitions baddi](/jsme/webroot/u_baddi_transitions/index.php)
+* Tranformationer och transitions
 
+(De finns ovan i menyn under exempelprogram)
 
 ###Beskriv hur du gjort din baddie och vilka konster den kan.
 
-Jag laddade ner en SVG-bild och editerade den i Inkscape. Min bild är lite större än den i kursexemplet så jag justerade i style.less och main.js för att hantera detta.
+Jag laddade ner en SVG-bild och editerade den i Inkscape. Jag döpte min baddie till Rutan. Min bild är lite större än den i kursexemplet så jag justerade i style.less och main.js för att hantera detta.
 
-[Flytta Rutan baddien](/jsme/webroot/u_rutan_move/index.php)
 
 ###Gjorde du extrauppgiften och utbildade din baddie med något extra?
 
 Den kan göra en dubbelsalto framåt och bakåt omväxlande om man trycker på 'd'.
 
-###Mallar
-
-* [mall](/jsme/webroot/mall/index.php)
-
-* [jsfidle-mall](http://jsfiddle.net/Kajja/7L1u8h02/)
 
 
 

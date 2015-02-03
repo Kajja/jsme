@@ -17,26 +17,19 @@ return [
             'url'   => $this->di->get('url')->create(''),
             'title' => 'Första sidan'
         ],
- 
-        // This is a menu item
-        'Templates'  => [
-            'text'  => 'Mallar',
-            'url'   => 'mallar',
-            'title' => 'Översikt frågor',
-        ],
- 
+  
         // This is a menu item
         'Exercises ' => [
-            'text'  =>'Uppgifter',
-            'url'   => 'redovisning/kmom1',
-            'title' => 'Uppgifter',
+            'text'  =>'Redovisningstexter',
+            'url'   => $this->di->get('url')->create('redovisning/content/kmom1'),
+            'title' => 'Redovisningstexter',
             'submenu' => [
                 'items' => [
 
                     'item 1'  => [
                         'text'  => 'Kmom1',   
                         'url'   => $this->di->get('url')->create('redovisning/content/kmom1'),  
-                        'title' => 'Kursmoment 1'
+                        'title' => 'Kursmoment 1',
                     ],
 
                     'item 2'  => [
@@ -75,11 +68,54 @@ return [
         ],
 
         // This is a menu item
-        'About' => [
-            'text'  =>'Om',
-            'url'   => $this->di->get('url')->create('about'),
-            'title' => 'Om'
+        'Examples'  => [
+            'text'  => 'Exempelprogram',
+            'url'   => $this->di->get('url')->create('u_change_size/'),
+            'title' => 'Exempelprogram',
+            'submenu' => [
+                'items' => [
+                    'item 1'  => [
+                        'text' => 'Kmom1: Ändra storlek',
+                        'url'   => $this->di->get('url')->create('u_change_size/'),  
+                        'title' => 'Ändra storlek',
+                    ],
+                    'item 2'  => [
+                        'text' => 'Kmom1: Flytta baddie',
+                        'url'   => $this->di->get('url')->create('u_baddi_move/'),  
+                        'title' => 'Flytta baddie',
+                    ],
+                    'item 3'  => [
+                        'text' => 'Kmom1: Transforms o transitions',
+                        'url'   => $this->di->get('url')->create('u_baddi_transitions/'),  
+                        'title' => 'Transf',
+                    ],
+                    'item 4'  => [
+                        'text' => 'Kmom1: Egen baddie',
+                        'url'   => $this->di->get('url')->create('u_rutan_move/'),  
+                        'title' => 'Flytta baddie',
+                    ],
+                ]
+            ]
         ],
+        'Templates' => [
+            'text'  => 'Mallar',
+            'url'   => $this->di->get('url')->create('u_change_size/'),
+            'title' => 'Mallar',
+            'submenu' => [
+                'items' => [
+                    'item 1'  => [
+                        'text' => 'Mall',
+                        'url'   => $this->di->get('url')->create('mall/'),  
+                        'title' => 'Mall',
+                    ],
+                    'item 2'  => [
+                        'text' => 'JS-fidle mall',
+                        'url'   => 'http://jsfiddle.net/Kajja/7L1u8h02/',  
+                        'title' => 'Mall',
+                    ],
+                ]
+            ]
+        ]  
     ], 
 
 
