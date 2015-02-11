@@ -1,0 +1,18 @@
+/**
+ * Import base style
+ */
+@import "../mall/base.less";
+ 
+/**
+ * Here comes specific style for a certain test program.
+ */
+
+ .ball {
+    height: 64px;
+    width: 64px;
+    position: fixed;
+    .transition-property(e('top, left'));
+    .transition-duration(e('1s, 1s'));
+    .transition-timing-function(e('ease, ease'));
+    background-image: url(http://dbwebb.se/img/black_ball_64_64.png);
+ }

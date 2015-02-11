@@ -1,0 +1,44 @@
+/**
+ * Import base style
+ */
+@import "../mall/base.less";
+ 
+/**
+ * Here comes specific style for a certain test program.
+ */
+
+@tableWidth: 160px;
+@fieldMargin: 3px;
+@border: 2px;
+@color1: #3DA417;
+@color2: red;
+@color3: black;
+
+#rtable {
+    width: @tableWidth;
+    height: 400px;
+    background-color: #1D7B1D;
+}
+
+.number {
+    float: left;
+    height: 20px;
+    text-align: center;
+    color: white;
+    margin: @fieldMargin;
+    &.green {
+        width: @tableWidth  - 2*@fieldMargin - 2*@border;
+        background-color: @color1;
+        border: solid @border darken(@color1, 20%);
+    }
+    &.red {
+        width: @tableWidth/3 - 2*@fieldMargin - 2*@border;
+        background-color: @color2;
+        border: solid @border darken(@color2, 20%);
+    }
+    &.black {
+        width: @tableWidth/3 - 2*@fieldMargin - 2*@border;
+        background-color: @color3;
+        border: solid @border darken(@color3, 20%);
+    }
+}

@@ -19,7 +19,7 @@ return [
         ],
   
         // This is a menu item
-        'Exercises ' => [
+        'Texts' => [
             'text'  =>'Redovisningstexter',
             'url'   => $this->di->get('url')->create('redovisning/content/kmom1'),
             'title' => 'Redovisningstexter',
@@ -68,30 +68,30 @@ return [
         ],
 
         // This is a menu item
-        'Examples'  => [
-            'text'  => 'Exempelprogram',
-            'url'   => $this->di->get('url')->create('u_change_size/'),
-            'title' => 'Exempelprogram',
+        'Execrises'  => [
+            'text'  => 'Övningar',
+            'url'   => $this->di->get('url')->create('ovningar/kmom1'),
+            'title' => 'Övningar',
             'submenu' => [
                 'items' => [
                     'item 1'  => [
-                        'text' => 'Kmom1: Ändra storlek',
-                        'url'   => $this->di->get('url')->create('u_change_size/'),  
-                        'title' => 'Ändra storlek',
+                        'text' => 'Kmom1',
+                        'url'   => $this->di->get('url')->create('ovningar/kmom1'),  
+                        'title' => 'Kmom1',
                     ],
                     'item 2'  => [
-                        'text' => 'Kmom1: Flytta baddie',
-                        'url'   => $this->di->get('url')->create('u_baddi_move/'),  
+                        'text' => 'Kmom2',
+                        'url'   => $this->di->get('url')->create('ovningar/kmom2'),  
                         'title' => 'Flytta baddie',
                     ],
                     'item 3'  => [
-                        'text' => 'Kmom1: Transforms o transitions',
-                        'url'   => $this->di->get('url')->create('u_baddi_transitions/'),  
+                        'text' => 'Kmom3',
+                        'url'   => $this->di->get('url')->create('ovningar/kmom3'),  
                         'title' => 'Transf',
                     ],
                     'item 4'  => [
-                        'text' => 'Kmom1: Egen baddie',
-                        'url'   => $this->di->get('url')->create('u_rutan_move/'),  
+                        'text' => 'Kmom4',
+                        'url'   => $this->di->get('url')->create('ovningar/kmom4'),  
                         'title' => 'Flytta baddie',
                     ],
                 ]
