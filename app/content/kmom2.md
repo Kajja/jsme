@@ -7,7 +7,7 @@ Det kändes som en bra uppfräschning av grunderna i JavaScript, men även hur m
 
 JSLint har både sina fördelar och nackdelar tycker jag. Fördelarna är bl.a. att man inte missar ';', identifierar variabler som inte används m.m. Nackdelen är att den är väldigt petig med att man ska följa den formatering som verktyget föreslår. Denna tycker jag inte alltid stämmer med min uppfattning om lättläst kod. Det blir lite knöligt då man ska behöva ställa in JSLint så att den ger relevanta "fel".
 
-Jag tycker kursmomentet var väldigt omfattande, och har lagt betydligt mer tid än vad som uppskattades i uppgiftstexten (har lärt mig att man får ta dessa med en väldigt stor nypa salt!). Uppgifterna i sig kändes inte speciellt svåra, men det var så många av dem. Om man vill skriva allt själv från "scratch" så tar det tid.
+Jag tycker kursmomentet var väldigt omfattande, och har lagt betydligt mer tid än vad som uppskattades i uppgiftstexten (har lärt mig att jag får ta dessa med en nypa salt). Uppgifterna i sig kändes inte speciellt svåra, men det var så många av dem. Om man vill skriva allt själv från "scratch" så tar det tid.
 
 ###Vilka funktioner har du lagt till i din variant av mos.js?
 
@@ -15,7 +15,7 @@ Förutom den funktion som skapar slumptal så la jag till en funktion som man ka
 
 ###Gjorde du något extra arbete på spelplanen med Boulder Dash, eller gjorde du kanske en egen spelvariant?
 
-Jag la till en liten grön kristall, går man på den så får man poäng. Tänkte lägga till en figur också som skulle gå omkring, men det blev inte tid för det.
+Jag la till en liten grön kristall, går man på den så får man poäng. Tänkte lägga till en figur till som skulle gå omkring lite random, men det blev inte tid för det.
 
 ###Gjorde du något extra på Roulettespelet?
 
