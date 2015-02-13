@@ -13,32 +13,91 @@
 @color1: #3DA417;
 @color2: red;
 @color3: black;
+@formWidth: 150px;
+@outputWidth: 350px;
+@numHeight: 20px;
+
+#flash {
+    label {
+        margin-bottom: 1.5em;
+    }
+}
 
 #rtable {
     width: @tableWidth;
     height: 400px;
     background-color: #1D7B1D;
+    display: inline-block;
+    vertical-align: top;
+    .box-shadow;
+}
+
+#bet_form {
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1em;
+    select {
+        display: block;
+    }
+    input {
+        margin-bottom: 0.5em;
+        width: @formWidth;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    input[type=button] {
+        float: right;
+        margin-top: 0.5em;
+    }
+}
+
+#output {
+    display: inline-block;
+    width: @outputWidth;
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+    p {
+        margin-bottom: 0.5em;
+    }
 }
 
 .number {
     float: left;
-    height: 20px;
+    height: @numHeight;
+    line-height: @numHeight;
     text-align: center;
     color: white;
     margin: @fieldMargin;
+    .border-radius;
     &.green {
         width: @tableWidth  - 2*@fieldMargin - 2*@border;
         background-color: @color1;
+        &.highlight {
+            background-color: lighten(@color1, 30%);
+        }
         border: solid @border darken(@color1, 20%);
     }
     &.red {
         width: @tableWidth/3 - 2*@fieldMargin - 2*@border;
         background-color: @color2;
+         &.highlight {
+            background-color: lighten(@color2, 30%);
+        }
         border: solid @border darken(@color2, 20%);
     }
     &.black {
         width: @tableWidth/3 - 2*@fieldMargin - 2*@border;
         background-color: @color3;
+         &.highlight {
+            background-color: lighten(@color3, 30%);
+        }
         border: solid @border darken(@color3, 20%);
+    }
+    &.highlight {
+        back-groundcolor: white;
     }
 }

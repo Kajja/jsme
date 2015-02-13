@@ -45,7 +45,8 @@ $app->router->add('ovningar/kmom2', function() use ($app) {
             'Datum' => $app->url->create('u2_date/'),
             'Reguljära uttryck' => $app->url->create('u2_regexp/'),
             'Felhantering' => $app->url->create('u2_errors/'),
-            'Roulette' => $app->url->create('u2_roulette/')
+            'Roulette' => $app->url->create('u2_roulette/'),
+            'Eget JS-lib' => $app->url->create('mall/kajja.js'),
         ]
     ]);
 });
