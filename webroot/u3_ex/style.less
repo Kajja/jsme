@@ -1,0 +1,130 @@
+/**
+ * Import base style
+ */
+@import "../mall/base.less";
+ 
+/**
+ * Here comes specific style for a certain test program.
+ */
+
+#flash > div {
+    border: solid 1px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+img {
+    padding: 1em;
+}
+
+.highlight {
+    background-color: pink;
+}
+
+// Exercise 3
+.new_el {
+    display: inline-block;
+    padding: 3px;
+    border: solid 1px;
+    margin: 3px;
+}
+
+// Excercise 4
+#img4 {
+    height: 300px;
+    width: 400px;
+}
+
+// Excersice 5
+#ex5 buttons{
+    margin-bottom: 5px;
+}
+
+#ex5 img {
+    height: 150px;
+    width: 200px;
+    padding: 0px;
+    margin: 3px;
+    display: block;
+    float: left;
+}
+
+// Excersice 6
+#ex6 img {
+    height: 150px;
+    width: 200px;
+    padding: 0px;
+    margin: 3px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-image: url('../img/preloader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+}
+
+#lightbox {
+    position: fixed;
+}
+
+// Excercise 7
+#ex7 ul {
+    list-style: none;
+    margin-top: 0px;
+}
+
+#ex7 .thumb {
+    display: inline;
+    img {
+        width: 64px;
+        height: 64px;
+        margin: 2px;
+        padding: 2px;
+        border: 1px solid black;
+        &.active, &.hover {
+            border-color: white;
+        }
+    }
+}
+
+#gallery {
+    background-color: black;
+    width: 600px;
+}
+
+#img_large {
+    vertical-align: baseline;
+    height: 400px;
+    padding: 1em;
+    //margin: 0 auto;
+    img {
+        padding: 0;
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        height: 100%;
+    }
+}
+
+// Exercise 8 Slideshow
+#slider {
+    height: 200px;
+    width: 600px;
+    overflow: hidden;
+    img {
+        padding: 0;
+        position: absolute;
+        height: 200px;
+        width: 600px;
+    }
+}
+
+.shown {
+    z-index: 10;
+}

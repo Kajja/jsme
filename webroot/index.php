@@ -51,6 +51,29 @@ $app->router->add('ovningar/kmom2', function() use ($app) {
     ]);
 });
 
+$app->router->add('ovningar/kmom3', function() use ($app) {
+
+    $app->views->add('assignments/base', [
+        'title' => 'Kmom3: Uppgifter',
+        'exercises' => [
+            'Övningar 1-8' => $app->url->create('u3_ex/'),
+            'Egen jQuery-plugin' => $app->url->create('u3_plugin/')
+        ]
+    ]);
+});
+
+$app->router->add('u3_plugin', function() use ($app) {
+
+    $app->theme->addJavaScript('../webroot/js/jquery.ezyread.js');
+    $app->theme->addJavaScript('../webroot/js/pluginpres.js');
+
+    $app->views->add('base/page', [
+        'title' => '',
+        'content' => $app->textFilter->doFilter($app->fileContent->get('plugin.md'), 'shortcode, markdown')
+    ]);
+});
+
+
 // Configuring how generated URLs vill look like
 $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
 

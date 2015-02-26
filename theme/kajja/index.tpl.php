@@ -70,5 +70,10 @@
                 <?php endif; ?>
             </footer>
         </div>
+        <?php if(isset($jquery)):?><script src='<?=$this->url->asset($jquery)?>'></script><?php endif; ?>
+
+        <?php if(isset($javascript_include)): foreach($javascript_include as $val): ?>
+        <script src='<?=$this->url->asset($val)?>'></script>
+        <?php endforeach; endif; ?>
     </body>
 </html>
