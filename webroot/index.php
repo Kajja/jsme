@@ -73,6 +73,20 @@ $app->router->add('u3_plugin', function() use ($app) {
     ]);
 });
 
+$app->router->add('ovningar/kmom4', function() use ($app) {
+
+    $app->views->add('assignments/base', [
+        'title' => 'Kmom4: Uppgifter',
+        'exercises' => [
+            'Marvin' => $app->url->create('u4_marvin/'),
+            'Login' => $app->url->create('u4_login/'),
+            'Kundvagn' => $app->url->create('u4_cart/'),
+            'Betalning' => $app->url->create('u4_checkout/'),
+            'Webbshop' => $app->url->create('u4_shop/')
+        ]
+    ]);
+});
+
 
 // Configuring how generated URLs vill look like
 $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);

@@ -1,0 +1,36 @@
+/**
+ * Import base style
+ */
+@import "../mall/base.less";
+ 
+/**
+ * Here comes specific style for a certain test program.
+ */
+@tableWidth: 65%;
+@cartWidth: 100% - @tableWidth - 5px;
+
+
+#articles {
+    width: @tableWidth;
+    display: inline-block;
+    td {
+        vertical-align: top;
+    }
+}
+
+#cart {
+    border-radius: 5px;
+    border: solid 1px black;
+    width: @cartWidth;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    font-size: 0.75em;
+    header {
+        vertical-align: bottom;
+        margin-bottom: 0.5em;
+    }
+    p {
+        margin-bottom: 0.5em;
+    }
+ }

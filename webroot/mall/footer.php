@@ -46,6 +46,8 @@
 </footer>
 <script src="../js/jquery.js"></script>
 <!-- <script src="../mall/mos.js"></script> -->
+<script src='../js/jquery.validate.js'></script>
+<script src='../js/messages_sv.min.js'></script>
 <script src="main.js"></script>
 </body>
 </html>
