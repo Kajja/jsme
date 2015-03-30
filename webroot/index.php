@@ -87,6 +87,15 @@ $app->router->add('ovningar/kmom4', function() use ($app) {
     ]);
 });
 
+$app->router->add('ovningar/kmom5', function() use ($app) {
+
+    $app->views->add('assignments/base', [
+        'title' => 'Kmom5: Uppgifter',
+        'exercises' => [
+            'Spelet Ketchup' => $app->url->create('u5_game/')
+        ]
+    ]);
+});
 
 // Configuring how generated URLs vill look like
 $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);

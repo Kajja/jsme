@@ -92,7 +92,12 @@ return [
                     'item 4'  => [
                         'text' => 'Kmom4',
                         'url'   => $this->di->get('url')->create('ovningar/kmom4'),  
-                        'title' => 'Flytta baddie',
+                        'title' => 'Ajax',
+                    ],
+                    'item 5'  => [
+                        'text' => 'Kmom5',
+                        'url'   => $this->di->get('url')->create('ovningar/kmom5'),  
+                        'title' => 'Canvas',
                     ],
                 ]
             ]
