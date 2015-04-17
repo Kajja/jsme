@@ -4,7 +4,7 @@
 // Configurations
 var port = 8041;
 var serverProtocols = ['chat-protocol'];
-var okOrigins = ['http://localhost', 'http://dbwebb.se', 'http://www.student.bth.se/'];
+var okOrigins = ['http://localhost', 'http://dbwebb.se', 'http://www.student.bth.se'];
 
 // Users that are connected
 var users = [];
