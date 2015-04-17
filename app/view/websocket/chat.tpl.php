@@ -3,7 +3,7 @@
     <div id='connection'>
             <div>
                 <input id='user' type='text' placeholder='Ditt användarnamn' required/> 
-                <label>Server: <input id='url' value='ws://127.0.0.1:3000'/></label>
+                <label>Server: <input id='url' value='ws://nodejs2.student.bth.se:8041'/></label>
             </div>
             <button id='connect'>Koppla upp</button>
             <button id='close' hidden>Koppla ner</button>
