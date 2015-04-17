@@ -1,0 +1,9 @@
+a:4:{s:4:"root";s:38:"../../u6_websocket/echo-broadcast.less";s:8:"compiled";s:86:"div {
+  margin-top: 1em;
+}
+#outtext {
+  margin: auto;
+  width: 90%;
+  height: 10em;
+}
+";s:5:"files";a:1:{s:61:"C:\xampp\htdocs\jsme\webroot\u6_websocket\echo-broadcast.less";i:1429262827;}s:7:"updated";i:1429262907;}

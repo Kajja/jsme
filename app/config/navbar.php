@@ -99,6 +99,11 @@ return [
                         'url'   => $this->di->get('url')->create('ovningar/kmom5'),  
                         'title' => 'Canvas',
                     ],
+                    'item 6'  => [
+                        'text' => 'Kmom6',
+                        'url'   => $this->di->get('url')->create('ovningar/kmom6'),  
+                        'title' => 'WebSockets o node.js',
+                    ],
                 ]
             ]
         ],

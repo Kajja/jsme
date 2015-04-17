@@ -97,6 +97,39 @@ $app->router->add('ovningar/kmom5', function() use ($app) {
     ]);
 });
 
+$app->router->add('ovningar/kmom6', function() use ($app) {
+
+    $app->views->add('assignments/base', [
+        'title' => 'Kmom6: Uppgifter',
+        'exercises' => [
+            'Echo och broadcast' => $app->url->create('echo-broadcast/'),
+            'Chatt' => $app->url->create('chat/'),
+            'Chatt-server (använder samma websocket-modul som i övningen)' => $app->url->create('u6_chat/chatserver.js')
+        ]
+    ]);
+});
+
+$app->router->add('echo-broadcast', function() use ($app) {
+
+    $app->theme->addStylesheet('css/stylephp/style.php?file=../../u6_websocket/echo-broadcast');
+    $app->theme->addJavaScript('js/less.min.js');
+    $app->theme->addJavaScript('u6_websocket/main.js');
+    $app->views->add('websocket/echo-broadcast', [
+        'path' => 'u6_websocket'
+    ]);
+});
+
+$app->router->add('chat', function() use ($app) {
+
+    $app->theme->addStylesheet('css/stylephp/style.php?file=../../u6_chat/chat');
+    $app->theme->addJavaScript('js/less.min.js');
+    $app->theme->addJavaScript('u6_chat/main.js');
+    $app->views->add('websocket/chat', [
+        'path' => 'u6_chat'
+    ]);
+});
+
+
 // Configuring how generated URLs vill look like
 $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
 
