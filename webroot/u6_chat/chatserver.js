@@ -2,7 +2,7 @@
 //***** by Mikael Feuk
 
 // Configurations
-var port = 3000;
+var port = 8041;
 var serverProtocols = ['chat-protocol'];
 var okOrigins = ['http://localhost', 'http://dbwebb.se', 'http://www.student.bth.se/'];
 
