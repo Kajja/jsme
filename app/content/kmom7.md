@@ -6,7 +6,7 @@ Det jag har utvecklat som projektuppgift består av två delar:
 * __multigame__: ett bibliotek/ramverk/plattform för multiplayer spel. Är baserat på Node.js.
 * __Tricker__: ett spel utvecklat för multigame-plattformen.
 
-[Projektsida](http://nodejs2.student.bth.se:8043/)
+[Projektsida](http://nodejs1.student.bth.se:8043/)
 
 På projektsidan finns även två instanser av spelet Tricker som man kan spela.
 
