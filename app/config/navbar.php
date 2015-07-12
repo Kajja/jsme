@@ -59,8 +59,8 @@ return [
                         'title' => 'Kursmoment 6'
                     ],
                     'item 7'  => [
-                        'text'  => 'Projekt',   
-                        'url'   => $this->di->get('url')->create('redovisning/content/proj'),  
+                        'text'  => 'Kmom7',   
+                        'url'   => $this->di->get('url')->create('redovisning/content/kmom7'),  
                         'title' => 'Projekt'
                     ]
                 ]
